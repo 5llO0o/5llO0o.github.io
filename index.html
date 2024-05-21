@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 GitHub Pages 웹사이트</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Hello, World!</p>
+    <div id="screen1" class="screen">
+        <header>
+            <h1>환영합니다!</h1>
+        </header>
+        <main>
+            <button id="nextButton">다음으로</button>
+        </main>
+    </div>
+    <div id="screen2" class="screen" style="display: none;">
+        <header>
+            <h1>다음 화면</h1>
+        </header>
+        <main>
+            <p>이곳이 두 번째 화면입니다.</p>
+        </main>
+        <footer>
+            <p>&copy; 2024 내 웹사이트. 모든 권리 보유.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
