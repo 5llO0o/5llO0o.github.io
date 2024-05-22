@@ -27,7 +27,12 @@ function hideAllPages() {
 document.getElementById('nextButton').addEventListener('click', function() {
     document.getElementById('screen1').style.display = 'none';
     document.getElementById('screen2').style.display = 'block';
-	hideAllPages();
+    	noticePage.style.display = 'none';
+    	worldPage.style.display = 'none';
+    	characterPage.style.display = 'none';
+    	systemPage.style.display = 'none';
+    	battlePage.style.display = 'none';
+    	memberPage.style.display = 'none';
 	mainContent.style.display = 'block';
 });
 
