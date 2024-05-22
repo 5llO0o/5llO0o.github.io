@@ -19,6 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const battlePage = document.getElementById('battlePage');
     const memberPage = document.getElementById('memberPage');
 
+    // Initialize the visibility of the screens and pages
+    function initializeVisibility() {
+        screen1.classList.add('active');
+        screen2.classList.remove('active');
+        mainContent.classList.add('active');
+        noticePage.classList.remove('active');
+        worldPage.classList.remove('active');
+        characterPage.classList.remove('active');
+        systemPage.classList.remove('active');
+        battlePage.classList.remove('active');
+        memberPage.classList.remove('active');
+    }
+
     nextButton.addEventListener('click', function() {
         screen1.classList.remove('active');
         screen2.classList.add('active');
@@ -68,4 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hideAllPages();
         memberPage.classList.add('active');
     });
+
+    // Call initializeVisibility on page load
+    initializeVisibility();
 });
