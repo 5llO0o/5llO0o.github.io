@@ -16,12 +16,12 @@ const memberPage = document.getElementById('memberPage');
 
 function hideAllPages() {
 	mainContent.style.display = 'none';
-    noticePage.style.display = 'none';
-    worldPage.style.display = 'none';
-    characterPage.style.display = 'none';
-    systemPage.style.display = 'none';
-    battlePage.style.display = 'none';
-    memberPage.style.display = 'none';
+    	noticePage.style.display = 'none';
+    	worldPage.style.display = 'none';
+    	characterPage.style.display = 'none';
+    	systemPage.style.display = 'none';
+    	battlePage.style.display = 'none';
+    	memberPage.style.display = 'none';
 }
 
 document.getElementById('nextButton').addEventListener('click', function() {
@@ -33,32 +33,32 @@ document.getElementById('nextButton').addEventListener('click', function() {
 
 mainButton.addEventListener('click', function() {
 	hideAllPages();
-	mainContent.style.display = 'none';
-});
+	mainContent.style.display = 'block';
+});  
 noticeButton.addEventListener('click', function() {
 	hideAllPages();
-	noticePage.style.display = 'none';
+	noticePage.style.display = 'block';
 });
 worldButton.addEventListener('click', function() {
 	hideAllPages();
-	worldPage.style.display = 'none';
+	worldPage.style.display = 'block';
 });noticeButton.addEventListener('click', function() {
 	hideAllPages();
-	noticePage.style.display = 'none';
+	noticePage.style.display = 'block';
 });
 characterButton.addEventListener('click', function() {
 	hideAllPages();
-	characterPage.style.display = 'none';
+	characterPage.style.display = 'block';
 });
 systemButton.addEventListener('click', function() {
 	hideAllPages();
-	systemPage.style.display = 'none';
+	systemPage.style.display = 'block';
 });
 battleButton.addEventListener('click', function() {
 	hideAllPages();
-	battlePage.style.display = 'none';
+	battlePage.style.display = 'block';
 });
 memberButton.addEventListener('click', function() {
 	hideAllPages();
-	memberPage.style.display = 'none';
+	memberPage.style.display = 'block';
 });
