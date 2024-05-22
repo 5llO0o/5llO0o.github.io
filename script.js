@@ -20,52 +20,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const memberPage = document.getElementById('memberPage');
 
     nextButton.addEventListener('click', function() {
-        screen1.style.display = 'none';
-        screen2.style.display = 'block';
+        screen1.classList.remove('active');
+        screen2.classList.add('active');
     });
 
     function hideAllPages() {
-        mainContent.style.display = 'none';
-        noticePage.style.display = 'none';
-        worldPage.style.display = 'none';
-        characterPage.style.display = 'none';
-        systemPage.style.display = 'none';
-        battlePage.style.display = 'none';
-        memberPage.style.display = 'none';
+        mainContent.classList.remove('active');
+        noticePage.classList.remove('active');
+        worldPage.classList.remove('active');
+        characterPage.classList.remove('active');
+        systemPage.classList.remove('active');
+        battlePage.classList.remove('active');
+        memberPage.classList.remove('active');
     }
 
     mainButton.addEventListener('click', function() {
         hideAllPages();
-        mainContent.style.display = 'block';
+        mainContent.classList.add('active');
     });
 
     noticeButton.addEventListener('click', function() {
         hideAllPages();
-        noticePage.style.display = 'block';
+        noticePage.classList.add('active');
     });
 
     worldButton.addEventListener('click', function() {
         hideAllPages();
-        worldPage.style.display = 'block';
+        worldPage.classList.add('active');
     });
 
     characterButton.addEventListener('click', function() {
         hideAllPages();
-        characterPage.style.display = 'block';
+        characterPage.classList.add('active');
     });
 
     systemButton.addEventListener('click', function() {
         hideAllPages();
-        systemPage.style.display = 'block';
+        systemPage.classList.add('active');
     });
 
     battleButton.addEventListener('click', function() {
         hideAllPages();
-        battlePage.style.display = 'block';
+        battlePage.classList.add('active');
     });
 
     memberButton.addEventListener('click', function() {
         hideAllPages();
-        memberPage.style.display = 'block';
+        memberPage.classList.add('active');
     });
 });
