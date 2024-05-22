@@ -19,69 +19,53 @@ document.addEventListener('DOMContentLoaded', function() {
     const battlePage = document.getElementById('battlePage');
     const memberPage = document.getElementById('memberPage');
 
-    // Initialize the visibility of the screens and pages
-    function initializeVisibility() {
-        screen1.classList.add('active');
-        screen2.classList.remove('active');
-        mainContent.classList.add('active');
-        noticePage.classList.remove('active');
-        worldPage.classList.remove('active');
-        characterPage.classList.remove('active');
-        systemPage.classList.remove('active');
-        battlePage.classList.remove('active');
-        memberPage.classList.remove('active');
-    }
-
     nextButton.addEventListener('click', function() {
-        screen1.classList.remove('active');
-        screen2.classList.add('active');
+        screen1.style.display = 'none';
+        screen2.style.display = 'block';
     });
 
     function hideAllPages() {
-        mainContent.classList.remove('active');
-        noticePage.classList.remove('active');
-        worldPage.classList.remove('active');
-        characterPage.classList.remove('active');
-        systemPage.classList.remove('active');
-        battlePage.classList.remove('active');
-        memberPage.classList.remove('active');
+        mainContent.style.display = 'none';
+        noticePage.style.display = 'none';
+        worldPage.style.display = 'none';
+        characterPage.style.display = 'none';
+        systemPage.style.display = 'none';
+        battlePage.style.display = 'none';
+        memberPage.style.display = 'none';
     }
 
     mainButton.addEventListener('click', function() {
         hideAllPages();
-        mainContent.classList.add('active');
+        mainContent.style.display = 'block';
     });
 
     noticeButton.addEventListener('click', function() {
         hideAllPages();
-        noticePage.classList.add('active');
+        noticePage.style.display = 'block';
     });
 
     worldButton.addEventListener('click', function() {
         hideAllPages();
-        worldPage.classList.add('active');
+        worldPage.style.display = 'block';
     });
 
     characterButton.addEventListener('click', function() {
         hideAllPages();
-        characterPage.classList.add('active');
+        characterPage.style.display = 'block';
     });
 
     systemButton.addEventListener('click', function() {
         hideAllPages();
-        systemPage.classList.add('active');
+        systemPage.style.display = 'block';
     });
 
     battleButton.addEventListener('click', function() {
         hideAllPages();
-        battlePage.classList.add('active');
+        battlePage.style.display = 'block';
     });
 
     memberButton.addEventListener('click', function() {
         hideAllPages();
-        memberPage.classList.add('active');
+        memberPage.style.display = 'block';
     });
-
-    // Call initializeVisibility on page load
-    initializeVisibility();
 });
