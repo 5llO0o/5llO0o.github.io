@@ -2,54 +2,55 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 .screen {
     display: none;
 }
 
-#screen1 {
+.screen.active {
     display: block;
 }
 
-main {
-    height: 100vh;
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
 button {
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: 2px solid #4CAF50;
-    border-radius: 50%;
-    font-size: 24px;
+    background-color: #007bff;
+    border: none;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
 }
 
 button:hover {
-    background-color: rgba(76, 175, 80, 0.1);
+    background-color: white;
+    color: black;
+    border: 2px solid #007bff;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em 0;
-}
-
-main p {
+main {
+    margin-top: 60px; /* Adjust this value based on header height */
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.subpage {
+    display: none;
 }
