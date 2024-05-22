@@ -1,60 +1,87 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const nextButton = document.getElementById('nextButton');
+    const screen1 = document.getElementById('screen1');
+    const screen2 = document.getElementById('screen2');
 
-.screen {
-    display: none;
-}
+    const mainButton = document.getElementById('mainButton');
+    const noticeButton = document.getElementById('noticeButton');
+    const worldButton = document.getElementById('worldButton');
+    const characterButton = document.getElementById('characterButton');
+    const systemButton = document.getElementById('systemButton');
+    const battleButton = document.getElementById('battleButton');
+    const memberButton = document.getElementById('memberButton');
 
-.screen.active {
-    display: block;
-}
+    const mainContent = document.getElementById('mainContent');
+    const noticePage = document.getElementById('noticePage');
+    const worldPage = document.getElementById('worldPage');
+    const characterPage = document.getElementById('characterPage');
+    const systemPage = document.getElementById('systemPage');
+    const battlePage = document.getElementById('battlePage');
+    const memberPage = document.getElementById('memberPage');
 
-header {
-    background-color: #f8f9fa;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+    // Initialize the visibility of the screens and pages
+    function initializeVisibility() {
+        screen1.classList.add('active');
+        screen2.classList.remove('active');
+        mainContent.classList.add('active');
+        noticePage.classList.remove('active');
+        worldPage.classList.remove('active');
+        characterPage.classList.remove('active');
+        systemPage.classList.remove('active');
+        battlePage.classList.remove('active');
+        memberPage.classList.remove('active');
+    }
 
-.button-container {
-    display: flex;
-    justify-content: space-around;
-}
+    nextButton.addEventListener('click', function() {
+        screen1.classList.remove('active');
+        screen2.classList.add('active');
+    });
 
-button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-}
+    function hideAllPages() {
+        mainContent.classList.remove('active');
+        noticePage.classList.remove('active');
+        worldPage.classList.remove('active');
+        characterPage.classList.remove('active');
+        systemPage.classList.remove('active');
+        battlePage.classList.remove('active');
+        memberPage.classList.remove('active');
+    }
 
-button:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #007bff;
-}
+    mainButton.addEventListener('click', function() {
+        hideAllPages();
+        mainContent.classList.add('active');
+    });
 
-main {
-    margin-top: 60px; /* Adjust this value based on header height */
-    padding: 20px;
-}
+    noticeButton.addEventListener('click', function() {
+        hideAllPages();
+        noticePage.classList.add('active');
+    });
 
-.subpage {
-    display: none;
-}
+    worldButton.addEventListener('click', function() {
+        hideAllPages();
+        worldPage.classList.add('active');
+    });
 
-.subpage.active {
-    display: block;
-}
+    characterButton.addEventListener('click', function() {
+        hideAllPages();
+        characterPage.classList.add('active');
+    });
+
+    systemButton.addEventListener('click', function() {
+        hideAllPages();
+        systemPage.classList.add('active');
+    });
+
+    battleButton.addEventListener('click', function() {
+        hideAllPages();
+        battlePage.classList.add('active');
+    });
+
+    memberButton.addEventListener('click', function() {
+        hideAllPages();
+        memberPage.classList.add('active');
+    });
+
+    // Call initializeVisibility on page load
+    initializeVisibility();
+});
