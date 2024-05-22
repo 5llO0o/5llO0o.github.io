@@ -4,7 +4,6 @@ document.getElementById('nextButton').addEventListener('click', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-
     const mainButton = document.getElementById('mainButton');
     const noticeButton = document.getElementById('noticeButton');
     const worldButton = document.getElementById('worldButton');
@@ -20,18 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const systemPage = document.getElementById('systemPage');
     const battlePage = document.getElementById('battlePage');
     const memberPage = document.getElementById('memberPage');
-
-    // Initialize the visibility of the screens and pages
-    function initializeVisibility() {
-        mainContent.classList.add('active');
-        noticePage.classList.remove('active');
-        worldPage.classList.remove('active');
-        characterPage.classList.remove('active');
-        systemPage.classList.remove('active');
-        battlePage.classList.remove('active');
-        memberPage.classList.remove('active');
-    }
-
 
     function hideAllPages() {
         mainContent.classList.remove('active');
@@ -77,7 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
         hideAllPages();
         memberPage.classList.add('active');
     });
-
-    // Call initializeVisibility on page load
-    initializeVisibility();
 });
