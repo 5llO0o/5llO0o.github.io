@@ -11,7 +11,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 #nextButton {
@@ -47,23 +47,3 @@ body, html {
 .gallery img.active {
     opacity: 1;
 }
-/*.gallery {
-    width: 800px;
-    height: 20px;
-    overflow: hidden;
-    position: relative;
-}
-
-.box {
-    width: 800px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.box.active {
-    opacity: 1;
-}*/
