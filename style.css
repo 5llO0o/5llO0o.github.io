@@ -36,14 +36,14 @@ header {
 }
 
 .gallery {
-    width: auto;
+    width: 100%;
     height: 20px;
     overflow: hidden;
     position: relative;
 }
 
 .gallery img {
-    width: auto;
+    width: 100%;
     height: 20px;
     position: absolute;
     top: 0;
