@@ -11,8 +11,10 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-	width: 80%;
     height: 100vh;
+}
+header{
+	align-items:center;
 }
 
 #nextButton {
