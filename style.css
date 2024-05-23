@@ -11,13 +11,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+	width: 80%;
     height: 100vh;
-}
-#screen2{
-	height: 800px;
-}
-header{
-	align-items:center;
 }
 
 #nextButton {
@@ -34,14 +29,14 @@ header{
 }
 
 .gallery {
-    width: 800px;
+    width: 100vh;
     height: 20px;
     overflow: hidden;
     position: relative;
 }
 
 .gallery img {
-    width: 800px;
+    width: 100vh;
     height: 20px;
     position: absolute;
     top: 0;
