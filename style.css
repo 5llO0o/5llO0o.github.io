@@ -13,6 +13,7 @@ body, html {
     align-items: center;
     height: 100vh;
 	max-width: 800px;
+	min-width:400px;
 }
 
 header {	
@@ -35,14 +36,14 @@ header {
 }
 
 .gallery {
-    width: 100vh;
+    width: auto;
     height: 20px;
     overflow: hidden;
     position: relative;
 }
 
 .gallery img {
-    width: 100vh;
+    width: auto;
     height: 20px;
     position: absolute;
     top: 0;
@@ -54,6 +55,7 @@ header {
 .gallery img.active {
     opacity: 1;
 }
+
 .button-container {
     display: flex;
     justify-content: center;
