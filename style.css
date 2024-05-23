@@ -6,7 +6,10 @@ body {
 }
 
 .screen {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #screen1 {
@@ -45,11 +48,17 @@ main p {
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+
+#nextButton {
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease;
 }
+
+#nextButton:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
