@@ -16,6 +16,9 @@ body, html {
 #screen2{
 	height: 800px;
 }
+header{
+	align-items:center;
+}
 
 #nextButton {
     font-size: 24px;
