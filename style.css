@@ -11,7 +11,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
 #nextButton {
@@ -28,14 +28,14 @@ body, html {
 }
 
 .gallery {
-    width: 800px;
+    width: 100vh;
     height: 20px;
     overflow: hidden;
     position: relative;
 }
 
 .gallery img {
-    width: 800px;
+    width: 100vh;
     height: 20px;
     position: absolute;
     top: 0;
