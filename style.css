@@ -15,6 +15,12 @@ body, html {
 	max-width: 800px;
 }
 
+header {	
+    display: flex;
+    justify-content: center;
+	align-items:center;
+}
+
 #nextButton {
     font-size: 24px;
     padding: 10px 20px;
