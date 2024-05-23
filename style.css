@@ -17,8 +17,9 @@ body, html {
 #screen2{
 	width:100%;
 }
-header{
-	align:center;
+header {	
+    display: flex;
+	align-items:center;
 }
 
 #nextButton {
