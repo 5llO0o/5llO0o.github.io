@@ -35,7 +35,7 @@ header {
 }
 
 .gallery {
-    width: 100%;
+    flex-basis: 120%;
     height: 20px;
     overflow: hidden;
     position: relative;
