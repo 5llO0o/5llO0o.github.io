@@ -62,3 +62,21 @@ memberButton.addEventListener('click', function() {
 	hideAllPages();
 	memberPage.style.display = 'block';
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let currentIndex = 0;
+    const images = document.querySelectorAll(".gallery img");
+    const totalImages = images.length;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add("active");
+    }
+
+    // Show the first image initially
+    images[currentIndex].classList.add("active");
+
+    // Change image every 2 seconds
+    setInterval(showNextImage, 2000);
+});
