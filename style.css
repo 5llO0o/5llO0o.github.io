@@ -27,16 +27,16 @@ body, html {
     background-color: rgba(128, 128, 128, 0.3);
 }
 
-/*.gallery {
+.gallery {
     width: 800px;
-    height: 50px;
+    height: 20px;
     overflow: hidden;
     position: relative;
 }
 
 .gallery img {
     width: 800px;
-    height: 50px;
+    height: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -46,8 +46,8 @@ body, html {
 
 .gallery img.active {
     opacity: 1;
-}*/
-.gallery {
+}
+/*.gallery {
     width: 800px;
     height: 20px;
     overflow: hidden;
@@ -66,4 +66,4 @@ body, html {
 
 .box.active {
     opacity: 1;
-}
+}*/

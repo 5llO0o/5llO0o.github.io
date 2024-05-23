@@ -64,18 +64,18 @@ memberButton.addEventListener('click', function() {
 	memberPage.style.display = 'block';
 });
     let currentIndex = 0;
-    const boxes = document.querySelectorAll(".gallery .box");
-    const totalBoxes = boxes.length;
+    const images = document.querySelectorAll(".gallery img");
+    const totalImages = images.length;
 
-    function showNextBox() {
-        boxes[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % totalBoxes;
-        boxes[currentIndex].classList.add("active");
+    function showNextImage() {
+        images[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add("active");
     }
 
-    // Show the first box initially
-    boxes[currentIndex].classList.add("active");
+    // Show the first image initially
+    images[currentIndex].classList.add("active");
 
-    // Change box every 2 seconds
-    setInterval(showNextBox, 2000);
+    // Change image every 2 seconds
+    setInterval(showNextImage, 2000);
 });
