@@ -1,10 +1,12 @@
 body, html {
     margin: 0;
-    padding: 50px;
+    padding: 50px 0px 0px 0px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+	max-width: 800px;
+	min-width: 400px;
 }
 
 .screen {
@@ -12,8 +14,6 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-	max-width: 800px;
-	min-width:400px;
 }
 
 header {	
