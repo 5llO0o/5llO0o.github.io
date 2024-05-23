@@ -64,7 +64,7 @@ memberButton.addEventListener('click', function() {
 	memberPage.style.display = 'block';
 });
     let currentIndex = 0;
-    const images = document.querySelectorAll(".gallery img");
+    const images = document.querySelectorAll(".gallery .gallery-img");
     const totalImages = images.length;
 
     function showNextImage() {
