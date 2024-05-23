@@ -1,6 +1,10 @@
 body, html {
-    height: 100%;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .screen {
@@ -23,7 +27,7 @@ body, html {
     background-color: rgba(128, 128, 128, 0.3);
 }
 
-.gallery {
+/*.gallery {
     width: 800px;
     height: 50px;
     overflow: hidden;
@@ -41,5 +45,25 @@ body, html {
 }
 
 .gallery img.active {
+    opacity: 1;
+}*/
+.gallery {
+    width: 800px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box {
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.box.active {
     opacity: 1;
 }
