@@ -78,6 +78,7 @@ header {
 /* 화면 가로폭이 600px 초과일 때 적용되는 스타일 */
 @media screen and (min-width: 601px) {
 	.gallery {
+		max-width: 800px;
 		height: 20px;
 		overflow: hidden;
 		position: relative;
