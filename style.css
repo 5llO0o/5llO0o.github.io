@@ -41,15 +41,15 @@ header {
 /* 화면 가로폭이 600px 이하일 때 적용되는 스타일 */
 @media screen and (max-width: 600px) {    
 	.gallery {
+		max-width: 360px;
 		height: 20px;
 		overflow: hidden;
 		position: relative;
-		align-items:center;
+		justify-content: center;
 	}
 
 	.gallery-img {
 		width: 100%;
-		max-width: 360px; /* 이미지 최대 너비 설정 */
 		height: 20px;
 		position: absolute;
 		top: 0;
@@ -87,7 +87,6 @@ header {
 
 	.gallery-img {
 		width: 100%;
-		max-width: 800px; /* 이미지 최대 너비 설정 */
 		height: 20px;
 		position: absolute;
 		top: 0;
