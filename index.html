@@ -7,24 +7,24 @@
     <link rel=stylesheet href=style.css>
 </head>
 <body>
-    <button id="menuButton">☰</button>
-    <div id="menu" class="menu">
-        <ul>
-            <li><a href="#" data-target="mainPage">메인</a></li>
-            <li><a href="#" data-target="noticePage">공지사항</a></li>
-            <li><a href="#" data-target="worldPage">세계관</a></li>
-            <li><a href="#" data-target="characterPage">캐릭터 가이드</a></li>
-            <li><a href="#" data-target="systemPage">통합시스템</a></li>
-            <li><a href="#" data-target="battlePage">전투시스템</a></li>
-            <li><a href="#" data-target="memberPage">멤버란</a></li>
-        </ul>
-    </div>
     <div id="screen1" class="screen">
         <main>
             <button id="nextButton">→</button>
         </main>
     </div>
     <div id="screen2" class="screen" style="display: none;">
+        <button id="menuButton">☰</button>
+        <div id="menu" class="menu">
+            <ul>
+                <li><a href="#" data-target="mainPage">Main</a></li>
+                <li><a href="#" data-target="noticePage">Notice</a></li>
+                <li><a href="#" data-target="worldPage">World</a></li>
+                <li><a href="#" data-target="characterPage">Character Guide</a></li>
+                <li><a href="#" data-target="systemPage">System</a></li>
+                <li><a href="#" data-target="battlePage">Battle System</a></li>
+                <li><a href="#" data-target="memberPage">Members</a></li>
+            </ul>
+        </div>
         <header>
             <div class="button-container">
                 <button id="noticeButton">Notice</button>
@@ -32,14 +32,16 @@
                 <button id="characterButton">Character</button>
                 <button id="mainButton">로고</button>
                 <button id="systemButton">System</button>
-                <button id="battleButton">System</button>
-                <button id="memberButton">Member</button>
+                <button id="battleButton">Battle System</button>
+                <button id="memberButton">Members</button>
             </div>
         </header>
-        <div class="gallery">
-            <img class="gallery-img" src="image/123.jpg" title="오이 코뢐 ㅋ">
-            <img class="gallery-img" src="image/12345.jpg" title="뭘보냐 코롹~ㅋ">
-            <img class="gallery-img" src="image/23.jpg" title="어이~ㅋ">
+        <div class="slider">
+            <ul class="gallery">
+                <li><img src="image/123.jpg"  title="이미지1" /></li>
+                <li><img src="image/12345.jpg" title="이미지2" /></li>
+                <li><img src="image/23.jpg" title="이미지3" /></li>
+            </ul>
         </div>
         <main>
             <div id="mainContent" class="subpage active">

@@ -66,21 +66,26 @@ memberButton.addEventListener('click', function() {
 	hideAllPages();
 	memberPage.style.display = 'block';
 });
-    let currentIndex = 0;
-    const images = document.querySelectorAll(".gallery .gallery-img");
-    const totalImages = images.length;
+const slider = document.querySelector('.slider');
+const gallery = document.querySelector('.gallery');
+const images = gallery.getElementsByTagName('li');
+const totalImages = images.length;
+let currentIndex = 0;
+const speed = 5000; // 5 seconds interval
 
-    function showNextImage() {
-        images[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % totalImages;
-        images[currentIndex].classList.add("active");
-    }
+function showNextImage() {
+    const sliderWidth = slider.clientWidth;
+    currentIndex = (currentIndex + 1) % totalImages;
+    gallery.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+}
 
-    // Show the first image initially
-    images[currentIndex].classList.add("active");
+setInterval(showNextImage, speed);
 
-    // Change image every 2 seconds
-    setInterval(showNextImage, 2000);
+window.addEventListener('resize', () => {
+    const sliderWidth = slider.clientWidth;
+    gallery.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+});
+
 
     // 메뉴 버튼 클릭 이벤트 핸들러
     menuButton.addEventListener('click', () => {
