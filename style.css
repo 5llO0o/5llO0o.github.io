@@ -13,7 +13,6 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    max-width: 800px;
 }
 
 #screen2 {
@@ -38,6 +37,45 @@ header {
 #nextButton:hover {
     background-color: rgba(128, 128, 128, 0.3);
 }
+#menuButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .menu ul li {
+            padding: 10px;
+            text-align: center;
+        }
+
+            .menu ul li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+            }
 
 /* Shared Styles for Media Queries */
 .gallery {
@@ -45,6 +83,7 @@ header {
     position: relative;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .gallery-img {
@@ -73,13 +112,21 @@ header {
     cursor: pointer;
 }
 
+
 /* Media Queries */
 @media screen and (max-width: 600px) {
     .gallery {
-        max-width: 360px;
+        width: 100%;
         height: 20px;
-		align-items: center;
     }
+
+    .button-container {
+        flex-wrap: flex;
+    }
+
+        .button-container button {
+            flex: 1;
+        }
 }
 
 @media screen and (min-width: 601px) {
@@ -87,4 +134,12 @@ header {
         max-width: 800px;
         height: 20px;
     }
+
+    .button-container {
+        display: flex;
+    }
+
+        .button-container button {
+            flex: 1;
+        }
 }
