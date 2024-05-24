@@ -6,6 +6,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #97c5ed;
 }
 
 .screen {
@@ -47,6 +48,75 @@ header {
     cursor: pointer;
     z-index: 1000;
 }
+/* 버튼 스타일 및 배치 */
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+    .button-container button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 20px;
+        color: black;
+        transition: transform 0.3s, box-shadow 0.3s;
+        aspect-ratio: 1 / 1; /* 정사각형 비율 설정 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-container button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    }
+
+#noticeButton {
+    top: 10%;
+    left: 0%;
+    width: 10%;
+}
+
+#worldButton {
+    top: 30%;
+    left: 10%;
+    width: 10%;
+}
+
+#characterButton {
+    top: 50%;
+    left: 20%;
+    width: 10%;
+}
+
+#mainButton {
+    top: 10%;
+    transform: translate(-50%. 0%);
+    width: 20%;
+}
+
+#systemButton {
+    top: 50%;
+    right: 20%;
+    width: 10%;
+}
+
+#battleButton {
+    top: 30%;
+    right: 10%;
+    width: 10%;
+}
+
+#memberButton {
+    top: 10%;
+    right: 0%;
+    width: 10%;
+}
+
 
 .menu {
     display: none;
@@ -115,6 +185,13 @@ header {
 
 /* Media Queries */
 @media screen and (max-width: 600px) {
+    header {
+        width: 460px;
+        min-width:320px;
+        height: 300px;
+        flex-wrap: flex;
+    }
+
     .gallery {
         width: 100%;
         height: 20px;
@@ -130,10 +207,15 @@ header {
 }
 
 @media screen and (min-width: 601px) {
+    header {
+        width: 800px;
+        height: 300px;
+    }
     .gallery {
         max-width: 800px;
         height: 20px;
     }
+
 
     .button-container {
         display: flex;
