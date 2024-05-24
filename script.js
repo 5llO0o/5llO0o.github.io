@@ -7,6 +7,9 @@ const systemButton = document.getElementById('systemButton');
 const battleButton = document.getElementById('battleButton');
 const memberButton = document.getElementById('memberButton');
 
+const links = document.querySelectorAll('.menu a');
+const subpages = document.querySelectorAll('.subpage');
+
 const mainContent = document.getElementById('mainContent');
 const noticePage = document.getElementById('noticePage');
 const worldPage = document.getElementById('worldPage');
@@ -78,4 +81,23 @@ memberButton.addEventListener('click', function() {
 
     // Change image every 2 seconds
     setInterval(showNextImage, 2000);
+
+    // 메뉴 버튼 클릭 이벤트 핸들러
+    menuButton.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+    // 페이지 전환 링크 클릭 이벤트 핸들러
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            subpages.forEach(subpage => {
+                subpage.style.display = 'none';
+                if (subpage.id === targetId) {
+                    subpage.style.display = 'block';
+                }
+            });
+            menu.style.display = 'none';
+        });
+    });
 });
