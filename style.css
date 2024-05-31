@@ -1,13 +1,27 @@
 /* Global Styles */
+@font-face {
+    font-family: 'Kopub Batang';
+    src: url("font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
+		 url("font/KoPubWorld Batang Medium.ttf") format('truetype'),
+		 url("font/KoPubWorld Batang-Medium.woff") format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
+
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #97c5ed;
+    background-image: url("image/Global-image/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .screen {
@@ -20,12 +34,21 @@ body, html {
 #screen2 {
     padding-top: 100px;
     margin: 0 10px;
+   
 }
 
 header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+	flex: 1;
 }
 
 #nextButton {
@@ -49,6 +72,10 @@ header {
     border: none;
     cursor: pointer;
     z-index: 1000;
+    color:white;
+}
+.menu a{
+    font-family: 'Kopub Batang', sans-serif;
 }
 /* 버튼 스타일 및 배치 */
 .button-container {
@@ -57,30 +84,44 @@ header {
     height: 100%;
 }
 
-    .button-container button {
-        position: absolute;
-        border: none;
-        background-color: transparent;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 50%;
-        padding: 20px;
-        color: black;
-        transition: transform 0.3s, box-shadow 0.3s;
-        aspect-ratio: 1 / 1; /* 정사각형 비율 설정 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .button-container button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
-    }
+.button-container button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    aspect-ratio: 1 / 1; /* 정사각형 비율 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kopub Batang', sans-serif;
+}
+.button-container button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+#noticeButton,
+#worldButton,
+#guideButton,
+#systemButton,
+#battleButton,
+#memberButton{
+	background-image: url("image/ButtonImage.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	
+}
 
 #noticeButton {
     top: 10%;
     left: 0%;
     width: 10%;
+
 }
 
 #worldButton {
@@ -89,7 +130,7 @@ header {
     width: 10%;
 }
 
-#characterButton {
+#guideButton {
     top: 50%;
     left: 20%;
     width: 10%;
@@ -193,10 +234,13 @@ header {
 @media screen and (max-width: 600px) {
     header {
         width: 90vw;
-        min-width:320px;
-        height: 300px;
+        min-width: 320px;
+        height: 200px;
         margin-top: 80px;
     }
+	main{
+        min-width: 320px;
+	}
 
     .gallery {
         width: 100%;
@@ -204,25 +248,38 @@ header {
     }
 
     .button-container {
-        flex-wrap: flex;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .button-container button {
-        flex: 1;
+        aspect-ratio: 1 / 1; /* 정사각형 비율 유지 */
     }
+	#noticeButton,
+	#worldButton,
+	#guideButton,
+	#systemButton,
+	#battleButton,
+	#memberButton{
+		display:none;	
+	}
+		
 }
 
 @media screen and (min-width: 601px) {
     header {
         width: 90vw;
-        max-width:800px;
+        max-width: 800px;
         height: 300px;
     }
+	main{
+		max-width: 800px;
+	}
+
     .gallery {
         max-width: 800px;
         height: 20px;
     }
-
 
     .button-container {
         display: flex;
@@ -231,4 +288,5 @@ header {
     .button-container button {
         flex: 1;
     }
+	
 }

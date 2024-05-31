@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const mainButton = document.getElementById('mainButton');
 const noticeButton = document.getElementById('noticeButton');
 const worldButton = document.getElementById('worldButton');
-const characterButton = document.getElementById('characterButton');
+const guideButton = document.getElementById('guideButton');
 const systemButton = document.getElementById('systemButton');
 const battleButton = document.getElementById('battleButton');
 const memberButton = document.getElementById('memberButton');
@@ -13,19 +13,19 @@ const subpages = document.querySelectorAll('.subpage');
 const mainContent = document.getElementById('mainContent');
 const noticePage = document.getElementById('noticePage');
 const worldPage = document.getElementById('worldPage');
-const characterPage = document.getElementById('characterPage');
+const guidePage = document.getElementById('guidePage');
 const systemPage = document.getElementById('systemPage');
 const battlePage = document.getElementById('battlePage');
 const memberPage = document.getElementById('memberPage');
 
 function hideAllPages() {
 	mainContent.style.display = 'none';
-    	noticePage.style.display = 'none';
-    	worldPage.style.display = 'none';
-    	characterPage.style.display = 'none';
-    	systemPage.style.display = 'none';
-    	battlePage.style.display = 'none';
-    	memberPage.style.display = 'none';
+    noticePage.style.display = 'none';
+    worldPage.style.display = 'none';
+    guidePage.style.display = 'none';
+    systemPage.style.display = 'none';
+    battlePage.style.display = 'none';
+    memberPage.style.display = 'none';
 }
 
 document.getElementById('nextButton').addEventListener('click', function() {
@@ -50,9 +50,9 @@ worldButton.addEventListener('click', function() {
 	hideAllPages();
 	noticePage.style.display = 'block';
 });
-characterButton.addEventListener('click', function() {
+guideButton.addEventListener('click', function() {
 	hideAllPages();
-	characterPage.style.display = 'block';
+	guidePage.style.display = 'block';
 });
 systemButton.addEventListener('click', function() {
 	hideAllPages();
