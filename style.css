@@ -12,7 +12,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -74,9 +74,6 @@ main{
     z-index: 1000;
     color:white;
 }
-.menu a{
-    font-family: 'Kopub Batang', sans-serif;
-}
 /* 버튼 스타일 및 배치 */
 .button-container {
     position: relative;
@@ -85,6 +82,7 @@ main{
 }
 
 .button-container button {
+	user-select : none;
     position: absolute;
     border: none;
     background-color: transparent;
@@ -121,7 +119,6 @@ main{
     top: 10%;
     left: 0%;
     width: 10%;
-
 }
 
 #worldButton {
@@ -172,23 +169,33 @@ main{
     color: white;
     padding-top: 60px;
     z-index: 999;
+    transition: left 0.3s ease;
 }
 
-    .menu ul {
-        list-style-type: none;
-        padding: 0;
-    }
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        .menu ul li {
-            padding: 10px;
-            text-align: center;
-        }
+.menu ul li {
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-100%);
+}
 
-            .menu ul li a {
-                color: white;
-                text-decoration: none;
-                display: block;
-            }
+.menu ul li:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+	font-family: 'Kopub Batang', sans-serif;
+}
 
 /* Shared Styles for Media Queries */
 .slider {
@@ -246,6 +253,9 @@ main{
         width: 100%;
         height: 20px;
     }
+	.menu {
+		width:100%;
+	}
 
     .button-container {
         display: flex;
@@ -283,10 +293,6 @@ main{
 
     .button-container {
         display: flex;
-    }
-
-    .button-container button {
-        flex: 1;
     }
 	
 }

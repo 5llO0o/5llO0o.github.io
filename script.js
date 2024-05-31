@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
-const mainButton = document.getElementById('mainButton');
-const noticeButton = document.getElementById('noticeButton');
-const worldButton = document.getElementById('worldButton');
-const guideButton = document.getElementById('guideButton');
-const systemButton = document.getElementById('systemButton');
-const battleButton = document.getElementById('battleButton');
-const memberButton = document.getElementById('memberButton');
+const mainButton = document.getElementById('mainButton'); 		//헤더 로고
+const noticeButton = document.getElementById('noticeButton'); 	//헤더 공지
+const worldButton = document.getElementById('worldButton'); 	//헤더 세계관
+const guideButton = document.getElementById('guideButton'); 	//헤더 캐릭터 가이드
+const systemButton = document.getElementById('systemButton'); 	//헤더 일반 시스템
+const battleButton = document.getElementById('battleButton'); 	//헤더 배틀 시스템
+const memberButton = document.getElementById('memberButton'); 	//헤더 멤버란
 
-const links = document.querySelectorAll('.menu a');
-const subpages = document.querySelectorAll('.subpage');
+const menuButton = document.getElementById('menuButton');		//메뉴 버튼
+const menu = document.getElementById('menu');					//메뉴 블록
+const menuItems = menu.querySelectorAll('ul li');				//메뉴 리스트
+let menuVisible = false;
+const links = document.querySelectorAll('.menu a');				//메뉴 글자
 
-const mainContent = document.getElementById('mainContent');
-const noticePage = document.getElementById('noticePage');
-const worldPage = document.getElementById('worldPage');
-const guidePage = document.getElementById('guidePage');
-const systemPage = document.getElementById('systemPage');
-const battlePage = document.getElementById('battlePage');
-const memberPage = document.getElementById('memberPage');
+const subpages = document.querySelectorAll('.subpage');			//바뀌는 페이지 부분 블록
+
+const mainContent = document.getElementById('mainContent');		//메인
+const noticePage = document.getElementById('noticePage');		//공지
+const worldPage = document.getElementById('worldPage');			//세계관
+const guidePage = document.getElementById('guidePage');			//가이드
+const systemPage = document.getElementById('systemPage');		//일반시스템
+const battlePage = document.getElementById('battlePage');		//배틀시스템
+const memberPage = document.getElementById('memberPage');		//멤버란
 
 function hideAllPages() {
 	mainContent.style.display = 'none';
@@ -86,10 +91,38 @@ window.addEventListener('resize', () => {
     gallery.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
 });
 
+	 menuButton.addEventListener('click', function () {
+		const menuWidth = menu.offsetWidth;
+        const initialLeftPosition = menuWidth === 250 ? '0' : `-${menuWidth}px`;
 
-    // 메뉴 버튼 클릭 이벤트 핸들러
-    menuButton.addEventListener('click', () => {
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        if (!menuVisible) {
+            menu.style.display = 'block';
+            menu.style.left = initialLeftPosition;
+
+            setTimeout(() => {
+                menu.style.left = '0';
+                menuItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateX(0)';
+                    }, index * 100); // Adjust the delay as needed
+                });
+            }, 10);
+        } else {
+            menuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '0';
+                    item.style.transform = `translateX(${initialLeftPosition})`;
+                }, index * 100); // Adjust the delay as needed
+            });
+            setTimeout(() => {
+                menu.style.left = initialLeftPosition;
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                }, 300);
+            }, menuItems.length * 100);
+        }
+        menuVisible = !menuVisible;
     });
     // 페이지 전환 링크 클릭 이벤트 핸들러
     links.forEach(link => {
