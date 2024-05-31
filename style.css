@@ -28,7 +28,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+	text-align: center;
+	height: 100vh;
 }
 
 #screen2 {
@@ -108,7 +109,7 @@ main{
 #systemButton,
 #battleButton,
 #memberButton{
-	background-image: url("image/ButtonImage.png");
+	background-image: url("image/Global-image/ButtonImage.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -163,7 +164,7 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 300px;
     height: 100%;
     background-color: black;
     color: white;
@@ -242,8 +243,8 @@ main{
     header {
         width: 90vw;
         min-width: 320px;
-        height: 200px;
-        margin-top: 80px;
+        height: 250px;
+        margin-top: 30px;
     }
 	main{
         min-width: 320px;
@@ -273,6 +274,7 @@ main{
 	#memberButton{
 		display:none;	
 	}
+	#mainButton{ width:40% }
 		
 }
 

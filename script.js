@@ -93,12 +93,8 @@ window.addEventListener('resize', () => {
 
 	 menuButton.addEventListener('click', function () {
 		const menuWidth = menu.offsetWidth;
-        const initialLeftPosition = menuWidth === 250 ? '0' : `-${menuWidth}px`;
-
-        if (!menuVisible) {
+		if (!menuVisible) {
             menu.style.display = 'block';
-            menu.style.left = initialLeftPosition;
-
             setTimeout(() => {
                 menu.style.left = '0';
                 menuItems.forEach((item, index) => {
@@ -107,20 +103,20 @@ window.addEventListener('resize', () => {
                         item.style.transform = 'translateX(0)';
                     }, index * 100); // Adjust the delay as needed
                 });
-            }, 10);
+            }, 100);
         } else {
             menuItems.forEach((item, index) => {
                 setTimeout(() => {
                     item.style.opacity = '0';
-                    item.style.transform = `translateX(${initialLeftPosition})`;
-                }, index * 100); // Adjust the delay as needed
+                    item.style.transform = 'translateX(-100%)';
+                }, index * 30); // Adjust the delay as needed
             });
             setTimeout(() => {
-                menu.style.left = initialLeftPosition;
+                menu.style.left = menuWidth === 300 ? '-300px' : '-100%';
                 setTimeout(() => {
                     menu.style.display = 'none';
                 }, 300);
-            }, menuItems.length * 100);
+            }, menuItems.length * 50);
         }
         menuVisible = !menuVisible;
     });
