@@ -8,48 +8,39 @@
     font-style: normal;
 }
 
-
 body, html {
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
-    align-items: center;
     background-color: #97c5ed;
-    background-image: url("image/Global-image/header.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     overflow-x: hidden;
 }
-
 .screen {
     display: flex;
+	width:1200px;
+	height:100vh;
+	margin: 0 auto;
+}
+#screen1 {
     justify-content: center;
     align-items: center;
-	text-align: center;
-	height: 100vh;
 }
 
 #screen2 {
     padding-top: 100px;
-    margin: 0 10px;
-   
+    background-image: url("image/Global-image/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
     display: flex;
-    justify-content: center;   
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 main{
-	flex: 1;
+	margin: 0 auto;
 }
 
 #nextButton {
@@ -80,6 +71,10 @@ main{
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .button-container button {
@@ -90,7 +85,6 @@ main{
     font-size: 18px;
     cursor: pointer;
     border-radius: 50%;
-    padding: 20px;
     color: white;
     transition: transform 0.3s, box-shadow 0.3s;
     aspect-ratio: 1 / 1; /* 정사각형 비율 설정 */
@@ -98,6 +92,7 @@ main{
     justify-content: center;
     align-items: center;
     font-family: 'Kopub Batang', sans-serif;
+    margin: 5px;
 }
 .button-container button:hover {
     transform: scale(1.1);
@@ -117,45 +112,45 @@ main{
 }
 
 #noticeButton {
-    top: 10%;
-    left: 0%;
-    width: 10%;
+    top: 0;
+    left: 8%;
+    width: 85px;
 }
 
 #worldButton {
-    top: 30%;
-    left: 10%;
-    width: 10%;
+    top: 28%;
+    left: 17%;
+    width: 85px;
 }
 
 #guideButton {
     top: 50%;
-    left: 20%;
-    width: 10%;
+    left: 30%;
+    width: 85px;
 }
 
 #mainButton {
-    top: 10%;
+    top: -10%;
     transform: translate(-50%. 0%);
     width: 20%;
 }
 
 #systemButton {
     top: 50%;
-    right: 20%;
-    width: 10%;
+    right: 30%;
+    width: 85px;
 }
 
 #battleButton {
-    top: 30%;
-    right: 10%;
-    width: 10%;
+    top: 28%;
+    right: 17%;
+    width: 85px;
 }
 
 #memberButton {
-    top: 10%;
-    right: 0%;
-    width: 10%;
+    top: 0;
+    right: 8%;
+    width: 85px;
 }
 
 
@@ -187,7 +182,7 @@ main{
 }
 
 .menu ul li:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -211,44 +206,87 @@ main{
     padding: 0;
     display: flex;
     transition: transform 0.5s ease-in-out;
+	color: #00ddff;
+	text-align:center;
 }
 
-    .gallery li {
-        flex-shrink: 0;
-        width: 100%;
-        height: 20px;
-        opacity: 1;
-    }
+.gallery li {
+    flex-shrink: 0;
+    width: 100%;
+    height: 20px;
+    opacity: 1;
+	background-color:#000;
+}
 
-    .gallery img {
-        width: 100%;
-        height: 100%;
-    }
-
-.button-container {
+/*Main Page*/
+.schedule-slider {
+	margin-top:10%;
+    position: relative;
+    overflow: hidden;
+}
+.schedule {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.schedule li {
+    flex-shrink: 0;
+    height: 100%;
+	width:100%;
+    opacity: 1;
+}
+.schedule li img {
+    width: 100%;
 }
 
-.button-container button {
-    margin: 5px;
+.schedule-slider button{
+	position: absolute;
+	top: 50%;
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+	aspect-ratio: 1 / 1;
+	border-radius:50%;
     cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.schedule-slider button:hover{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.prev {
+    left: 2%;
+}
+.next {
+    right: 2%;
+}
+#wiki, #reception, #QnA{
+	width:35%;
 }
 
+#GeneralAccount{
+	position: fixed;
+    bottom: 2%;
+    right: 10%;
+    margin: 10px;
+	width: 100px;
+}
+#GeneralAccount:hover{	
+    transform: scale(1.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
 
 /* Media Queries */
 @media screen and (max-width: 600px) {
     header {
-        width: 90vw;
         min-width: 320px;
         height: 250px;
         margin-top: 30px;
     }
-	main{
-        min-width: 320px;
-	}
 
     .gallery {
         width: 100%;
@@ -274,22 +312,25 @@ main{
 	#memberButton{
 		display:none;	
 	}
-	#mainButton{ width:40% }
-		
+	#mainButton{ width:30% }
+	
+	#GeneralAccount{
+		width:75px;
+	}
 }
 
 @media screen and (min-width: 601px) {
     header {
-        width: 90vw;
-        max-width: 800px;
-        height: 300px;
+        max-width: 1200px;
+        height: 250px;
     }
-	main{
-		max-width: 800px;
+	#screen2 main{
+		max-width: 1200px;
+		width:90%;
 	}
 
     .gallery {
-        max-width: 800px;
+        max-width: 1200px;
         height: 20px;
     }
 

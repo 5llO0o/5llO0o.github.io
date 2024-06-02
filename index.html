@@ -36,16 +36,50 @@
 				<button id="memberButton">Members</button>
 			</div>
 		</header>
-		<div class="slider">
-			<ul class="gallery">
-				<li><img src="image/Global-image/gallery1.jpg" title="이미지1"></li>
-				<li><img src="image/Global-image/gallery2.jpg" title="이미지2"></li>
-				<li><img src="image/Global-image/gallery3.jpg" title="이미지3"></li>
-			</ul>
-		</div>
 		<main>
+			<div class="slider">
+				<ul class="gallery">
+					<li>지존 간지나는 문구</li>
+					<li>레비아탄이 되어보자!</li>
+					<li>개굴개굴개구리노래를한다아기염소여럿이다아모여서긴글테스트하나둘셋얍내가잠을자볼게</li>
+				</ul>
+			</div>
 			<div id="mainContent" class="subpage active">
-				<p>지금부터 메인을 만들어~</p>					
+			<table style="table-layout: fixed">
+				<tr>
+					<td class="tb-schedule" rowspan="2" width="50%">
+						<div class="schedule-slider">
+							<ul class="schedule">
+								<li><img src="image/MainPage/Schedule/schedule_1.jpg" id="schedule1"></li>
+								<li><img src="image/MainPage/Schedule/schedule_2.jpg"></li>
+								<li><img src="image/MainPage/Schedule/schedule_3.jpg"></li>
+							</ul>
+							<button class="prev">◀</button>
+							<button class="next">▶</button>
+						</div>
+					</td>
+					<td class="tb-reception" colspan="2" height="20%">
+						<a href="https://forms.gle/Pq8zJbHXgfgVvyPs6" target="_blank">
+							<img src="image/MainPage/reception.png" id="reception" alt="설정 접수폼">
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="tb-QnA" width="25%">
+						<a href="https://docs.google.com/document/d/1NjlQ0COX55Yeg1U9Y-8U9PdmBSTpTLvuu2mliDqeLsc/edit?usp=sharing" target="_blank">
+							<img src="image/MainPage/QnA.png" id="QnA" alt="QnA">
+						</a>
+					</td>
+					<td class="tb-wiki" width="25%">
+						<a href="#" target="_blank">
+							<img src="image/MainPage/wiki.png" id="wiki" alt="마법 위키">
+						</a>
+					</td>
+				</tr>
+			</table>				
+				<a href="https://x.com/FR5OG" target="_blank">
+				<img src="image/MainPage/owl-GeneralAccount.png" id="GeneralAccount" title="총괄계정 바로가기">
+				</a>
 			</div>
 			<div id="noticePage" class="subpage">
 				<h1>공지사항</h1>
@@ -76,6 +110,9 @@
 			<p>footer</p>
 		</footer>
 	</div>
-    <script src="script.js"></script>
+	<script src="js/schedule.js"></script>
+	<script src="js/buttonPage.js"></script>
+	<script src="js/Menu.js"></script>
+	<script src="js/gallery.js"></script>
 </body>
 </html>
