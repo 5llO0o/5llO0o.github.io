@@ -282,9 +282,12 @@ main{
 
 /* Media Queries */
 @media screen and (max-width: 600px) {
+	body, html{
+		display:flex;
+	}
     header {
         min-width: 320px;
-        height: 250px;
+        height: 200px;
         margin-top: 30px;
     }
 
