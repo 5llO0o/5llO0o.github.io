@@ -285,6 +285,9 @@ main{
 	body, html{
 		display:flex;
 	}
+	.screen{
+		max-width:320px;
+	}
     header {
         min-width: 320px;
         height: 200px;
