@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝐋𝐞𝐯𝐢𝐚𝐭𝐡𝐚𝐧</title>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="global-style.css">
+	<link rel="stylesheet" href="mainPage.css">
+	<link rel="stylesheet" href="memberPage.css">
 </head>
 <body>
     <div id="screen1" class="screen">
@@ -45,40 +47,27 @@
 				</ul>
 			</div>
 			<div id="mainContent" class="subpage active">
-			<table style="table-layout: fixed">
-				<tr>
-					<td class="tb-schedule" rowspan="2" width="50%">
-						<div class="schedule-slider">
-							<ul class="schedule">
-								<li><img src="image/MainPage/Schedule/schedule_1.JPG" id="schedule1"></li>
-								<li><img src="image/MainPage/Schedule/schedule_2.JPG"></li>
-								<li><img src="image/MainPage/Schedule/schedule_3.JPG"></li>
-							</ul>
-							<button class="prev">◀</button>
-							<button class="next">▶</button>
-						</div>
-					</td>
-					<td class="tb-reception" colspan="2" height="20%">
-						<a href="https://forms.gle/Pq8zJbHXgfgVvyPs6" target="_blank">
-							<img src="image/MainPage/reception.png" id="reception" alt="설정 접수폼">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="tb-QnA" width="25%">
-						<a href="https://docs.google.com/document/d/1NjlQ0COX55Yeg1U9Y-8U9PdmBSTpTLvuu2mliDqeLsc/edit?usp=sharing" target="_blank">
-							<img src="image/MainPage/QnA.png" id="QnA" alt="QnA">
-						</a>
-					</td>
-					<td class="tb-wiki" width="25%">
-						<a href="#" target="_blank">
-							<img src="image/MainPage/wiki.png" id="wiki" alt="마법 위키">
-						</a>
-					</td>
-				</tr>
-			</table>				
+				<div class="schedule-slider">
+					<ul class="schedule">
+						<li><img src="image/MainPage/Schedule/schedule_1.JPG" id="schedule1"></li>
+						<li><img src="image/MainPage/Schedule/schedule_2.JPG"></li>
+						<li><img src="image/MainPage/Schedule/schedule_3.JPG"></li>
+					</ul>
+					<button class="prev">◀</button>
+					<button class="next">▶</button>
+				</div>
+				
+				<a href="https://forms.gle/Pq8zJbHXgfgVvyPs6" target="_blank">
+					<img src="image/MainPage/reception.png" id="reception" alt="설정 접수폼">
+				</a>
+				<a href="https://docs.google.com/document/d/1NjlQ0COX55Yeg1U9Y-8U9PdmBSTpTLvuu2mliDqeLsc/edit?usp=sharing" target="_blank">
+					<img src="image/MainPage/QnA.png" id="QnA" alt="QnA">
+				</a>
+				<a href="#" target="_blank">
+					<img src="image/MainPage/wiki.png" id="wiki" alt="마법 위키">
+				</a>			
 				<a href="https://x.com/FR5OG" target="_blank">
-				<img src="image/MainPage/owl-GeneralAccount.png" id="GeneralAccount" title="총괄계정 바로가기">
+				<img src="image/MainPage/owl-GeneralAccount.png" id="GeneralAccount" title="개굴계정 바로가기">
 				</a>
 			</div>
 			<div id="noticePage" class="subpage">
@@ -102,8 +91,16 @@
 				<p>전투시스템 내용...</p>
 			</div>
 			<div id="memberPage" class="subpage">
-				<h1>멤버란</h1>
-				<p>멤버란 내용...</p>
+				<div id="password-container">
+					<h2>여기를 어떻게 꾸밀까요 황샹</h2>
+					<input type="password" id="password" placeholder="임시 비밀번호는 0000입니다..." onkeyup="handleKeyUp(event)">
+					<button id="protect-button" onclick="checkPassword()">확인</button>
+					<p id="error-message" style="color: red; display: none;">알려줜는데도 틀리다니요</p>
+				</div>
+				<div id="protected-content">
+					<h1>멤버란</h1>
+					<p>이스터에그를 뚠 따 뚠 따</p>
+				</div>
 			</div>
 		</main>
 		<footer>
@@ -115,4 +112,5 @@
 	<script src="js/Menu.js"></script>
 	<script src="js/gallery.js"></script>
 </body>
+	<script src="js/memberPage.js"></script>
 </html>

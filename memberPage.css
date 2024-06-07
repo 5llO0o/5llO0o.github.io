@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Kopub Batang';
+    src: url("font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
+		 url("font/KoPubWorld Batang Medium.ttf") format('truetype'),
+		 url("font/KoPubWorld Batang-Medium.woff") format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
+#password-container {
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+	border:none;
+}
+
+#password {
+    padding: 10px;
+    margin: 10px 0;
+    border: transparent;
+    background-color: transparent;
+    width: 50%;
+    box-sizing: border-box;
+	text-align:center;
+}
+#password:focus {
+    outline: none;
+    border: none;
+}
+
+#protect-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #333;
+    cursor: pointer;
+}
+
+#protect-button:hover {
+	color: #fff;
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+
+#protected-content {
+    display: none;
+}
