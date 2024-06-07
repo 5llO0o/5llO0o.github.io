@@ -66,3 +66,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+	function scrollToTop() {
+		document.body.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+	}
+	window.scrollToTop = scrollToTop;
+  
+});

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝐋𝐞𝐯𝐢𝐚𝐭𝐡𝐚𝐧</title>
-	<link rel="stylesheet" href="global-style.css">
-	<link rel="stylesheet" href="mainPage.css">
-	<link rel="stylesheet" href="memberPage.css">
+	<link rel="stylesheet" href="styles/global-style.css">
+	<link rel="stylesheet" href="styles/mainPage.css">
+	<link rel="stylesheet" href="styles/memberPage.css">
 </head>
 <body>
     <div id="screen1" class="screen">
@@ -32,7 +32,7 @@
 				<button id="noticeButton">Notice</button>
 				<button id="worldButton">World</button>
 				<button id="guideButton">Guide</button>
-				<button id="mainButton">로고</button>
+				<button id="mainButton"></button>
 				<button id="systemButton">System</button>
 				<button id="battleButton">Battle System</button>
 				<button id="memberButton">Members</button>
@@ -69,26 +69,32 @@
 				<a href="https://x.com/FR5OG" target="_blank">
 				<img src="image/MainPage/owl-GeneralAccount.png" id="GeneralAccount" title="개굴계정 바로가기">
 				</a>
+				<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 			</div>
 			<div id="noticePage" class="subpage">
 				<h1>공지사항</h1>
 				<p>공지사항 내용...</p>
+				<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 			</div>
 			<div id="worldPage" class="subpage">
 				<h1>세계관</h1>
 				<p>세계관 내용...</p>
+				<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 			</div>
 			<div id="guidePage" class="subpage">
 				<h1>캐릭터 가이드</h1>
 				<p>캐릭터 가이드 내용...</p>
+				<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 			</div>
 			<div id="systemPage" class="subpage">
 				<h1>통합시스템</h1>
 				<p>통합시스템 내용...</p>
+				<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 			</div>
 			<div id="battlePage" class="subpage">
 				<h1>전투시스템</h1>
 				<p>전투시스템 내용...</p>
+				<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 			</div>
 			<div id="memberPage" class="subpage">
 				<div id="password-container">
@@ -100,17 +106,20 @@
 				<div id="protected-content">
 					<h1>멤버란</h1>
 					<p>이스터에그를 뚠 따 뚠 따</p>
+					<div class="mob-scrollup"><div id="scrollToTop" onclick="scrollToTop()">✶</div></div>
 				</div>
 			</div>
 		</main>
+		
 		<footer>
 			<p>footer</p>
 		</footer>
 	</div>
+</body>
 	<script src="js/schedule.js"></script>
 	<script src="js/buttonPage.js"></script>
 	<script src="js/Menu.js"></script>
 	<script src="js/gallery.js"></script>
-</body>
 	<script src="js/memberPage.js"></script>
+	
 </html>

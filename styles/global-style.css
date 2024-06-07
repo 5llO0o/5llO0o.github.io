@@ -31,7 +31,7 @@ body, html {
 
 #screen2 {
     padding-top: 100px;
-    background-image: url("image/Global-image/header.png");
+    background-image: url("../image/Global-image/header.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -104,7 +104,7 @@ main{
 #systemButton,
 #battleButton,
 #memberButton{
-	background-image: url("image/Global-image/ButtonImage.png");
+	background-image: url("../image/Global-image/ButtonImage.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -116,7 +116,7 @@ main{
 	top: -10%;
     transform: translate(-50%. 0%);
     width: 20%;
-	background-image: url("image/Global-image/logo.png");
+	background-image: url("../image/Global-image/logo.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -153,6 +153,16 @@ main{
     right: 8%;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .menu {
     display: none;
@@ -255,6 +265,29 @@ main{
 	#GeneralAccount{
 		width:75px;
 	}
+	.mob-scrollup{
+		position: relative;
+		width:100%;
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+	#scrollToTop {
+		user-select : none;
+		position: absolute;
+		border: none;
+		background-color: transparent;
+		font-size: 20px;
+		cursor: pointer;
+		color: white;
+		transition: transform 0.3s, box-shadow 0.3s;
+		display: flex;
+		font-family: 'Kopub Batang', sans-serif;
+	}
+	#scrollToTop:hover {
+		transform: scale(1.5);
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -274,6 +307,9 @@ main{
     .button-container {
         display: flex;
     }
+	#scrollToTop{
+		display:none;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -293,6 +329,9 @@ main{
     .button-container {
         display: flex;
     }
+	#scrollToTop{
+		display:none;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -308,8 +347,11 @@ main{
         max-width: 1200px;
         height: 20px;
     }
-
     .button-container {
         display: flex;
     }
+	
+	.scrollToTop{
+		display:none;
+	}
 }
