@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-	animation: fadeInUp 1s ease forwards;
+	animation: fadeInUp 1s ease-out;
 }
 
 @keyframes fadeInUp {

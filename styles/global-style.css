@@ -39,7 +39,7 @@ body, html {
 }
 
 #section-all{
-	animation: fadeInUp 1s ease forwards;
+	animation: fadeInUp 1s ease ease-out;
 }
 
 @keyframes fadeInUp {
