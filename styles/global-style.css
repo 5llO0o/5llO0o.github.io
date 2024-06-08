@@ -1,9 +1,9 @@
 /* Global Styles */
 @font-face {
     font-family: 'Kopub Batang';
-    src: url("font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
-		 url("font/KoPubWorld Batang Medium.ttf") format('truetype'),
-		 url("font/KoPubWorld Batang-Medium.woff") format('woff');
+    src: url("../font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
+		 url("../font/KoPubWorld Batang Medium.ttf") format('truetype'),
+		 url("../font/KoPubWorld Batang-Medium.woff") format('woff');
 	font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +15,7 @@ body, html {
     height: 100vh;
     justify-content: center;
     background-color: #97c5ed;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 .screen {
     display: flex;
@@ -29,11 +29,30 @@ body, html {
     align-items: center;
 }
 
-#screen2 {
-    padding-top: 100px;
-    background-image: url("../image/Global-image/header.png");
-    background-size: cover;
+#screen2{
+	width:100vw;
+	height: autio;
+	padding-top: 100px;
+	background-image: url("../image/Global-image/header.png");
+    background-size: 100%;
     background-repeat: no-repeat;
+}
+
+#section-all{
+	animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+    display:none;
 }
 
 header {
@@ -84,7 +103,7 @@ main{
     position: absolute;
     border: none;
     background-color: transparent;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     color: white;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -153,17 +172,6 @@ main{
     right: 8%;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .menu {
     display: none;
     position: fixed;
@@ -227,15 +235,23 @@ main{
     opacity: 1;
 	background-color:#000;
 }
+
 @media (max-width: 767px){
 	body, html{
 		display:flex;
 	}
     header {
         min-width: 320px;
-        height: 200px;
+        height: 180px;
         margin-top: 30px;
     }
+	#screen2 main{
+	}
+	
+	#section-all{
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
 
     .gallery {
         width: 100%;
@@ -247,7 +263,7 @@ main{
 
     .button-container {
         display: flex;
-        flex-wrap: wrap;
+		height: 50%;
     }
 	
 	#noticeButton,
@@ -274,15 +290,15 @@ main{
 		margin-bottom: 20px;
 	}
 	#scrollToTop {
-		user-select : none;
+		display: flex; /* 일단은 숨깁니다. */
 		position: absolute;
+		user-select : none;
 		border: none;
 		background-color: transparent;
 		font-size: 20px;
 		cursor: pointer;
 		color: white;
 		transition: transform 0.3s, box-shadow 0.3s;
-		display: flex;
 		font-family: 'Kopub Batang', sans-serif;
 	}
 	#scrollToTop:hover {
@@ -351,7 +367,7 @@ main{
         display: flex;
     }
 	
-	.scrollToTop{
+	#scrollToTop{
 		display:none;
 	}
 }

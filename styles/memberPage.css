@@ -1,10 +1,28 @@
 @font-face {
     font-family: 'Kopub Batang';
-    src: url("font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
-		 url("font/KoPubWorld Batang Medium.ttf") format('truetype'),
-		 url("font/KoPubWorld Batang-Medium.woff") format('woff');
+    src: url("../font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
+		 url("../font/KoPubWorld Batang Medium.ttf") format('truetype'),
+		 url("../font/KoPubWorld Batang-Medium.woff") format('woff');
 	font-weight: normal;
     font-style: normal;
+}
+#memberPage{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+	animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #password-container {
@@ -56,4 +74,5 @@
 
 #protected-content {
     display: none;
+	animation: fadeInUp 1s ease forwards;
 }

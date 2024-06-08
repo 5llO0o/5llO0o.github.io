@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	worldButton.addEventListener('click', function() {
 		hideAllPages();
 		worldPage.style.display = 'block';
-	});noticeButton.addEventListener('click', function() {
+	});
+	noticeButton.addEventListener('click', function() {
 		hideAllPages();
 		noticePage.style.display = 'block';
 	});
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		hideAllPages();
 		memberPage.style.display = 'block';
 	});
-
+	
 });
 document.addEventListener('DOMContentLoaded', (event) => {
 	function scrollToTop() {
@@ -74,5 +75,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 	}
 	window.scrollToTop = scrollToTop;
-  
 });
