@@ -140,7 +140,7 @@ main{
     width: 85px;
 }
 #mainButton{
-	top: -10%;
+	top: -5%;
     width: 20%;
 	background-image: url("../image/Global-image/logo.png");
 	background-size: cover;
@@ -155,7 +155,7 @@ main{
 }
 
 #worldButton {
-    top: 30%;
+    top: 25%;
     left: 18%;
 }
 
@@ -170,7 +170,7 @@ main{
 }
 
 #battleButton {
-    top: 30%;
+    top: 25%;
     right: 18%;
 }
 
