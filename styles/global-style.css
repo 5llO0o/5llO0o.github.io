@@ -30,19 +30,23 @@ body, html {
 }
 
 #screen2{
-	width:100vw;
-	height: autio;
 	padding-top: 100px;
 	background-image: url("../image/Global-image/header.png");
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
-#section-all{
-	animation: fadeInUp 1s ease ease-out;
+.subpage{
+	position: relative;
+    width: 90%;
+    height: 100%;
+    display: flex;
+	margin:0 auto;
+    flex-wrap: wrap;
+	animation: fadeIn 1s ease-out;
+	transform: 0;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -133,7 +137,6 @@ main{
 }
 #mainButton{
 	top: -10%;
-    transform: translate(-50%. 0%);
     width: 20%;
 	background-image: url("../image/Global-image/logo.png");
 	background-size: cover;
@@ -236,15 +239,25 @@ main{
 	background-color:#000;
 }
 
+footer{
+	color:#CCC;
+	text-align:center;
+	font-size:12px;
+	font-family: 'Kopub Batang', sans-serif;
+}
+
 @media (max-width: 767px){
 	body, html{
 		display:flex;
 	}
     header {
-        min-width: 320px;
-        height: 180px;
+        min-width: 320px;        
+        height: 8em;
         margin-top: 30px;
     }
+	#screen2{
+		padding-top:50px;
+	}
 	#screen2 main{
 	}
 	
@@ -290,7 +303,6 @@ main{
 		margin-bottom: 20px;
 	}
 	#scrollToTop {
-		display: flex; /* 일단은 숨깁니다. */
 		position: absolute;
 		user-select : none;
 		border: none;
@@ -300,6 +312,7 @@ main{
 		color: white;
 		transition: transform 0.3s, box-shadow 0.3s;
 		font-family: 'Kopub Batang', sans-serif;
+		bottom:15px;
 	}
 	#scrollToTop:hover {
 		transform: scale(1.5);

@@ -1,22 +1,4 @@
 /*Main Page*/
-#mainContent{
-	position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-	animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .schedule-slider {
 	margin-top:5%;
     position: relative;
@@ -90,18 +72,18 @@
 }
 
 @media (max-width: 767px){
+	#screen2 main{
+		margin-bottom:90%;
+	}
 	.schedule-slider{
 		width:90%;
 		margin: 0 auto;
 		padding-top:5%;
 	}
 	.main-button{
-		position: relative;
+		position: absolute;
 		width: 100%;
-		height: 80vh;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+		height: 100%;
 		margin-bottom: 20px;
 	}
 	#QnA, #reception, #wiki, #GeneralAccount{
@@ -114,24 +96,26 @@
 		display: flex;
 	}
 	#QnA{
-		width:35%;
-		right:5%;
+		width:40%;
+		right:10%;
+		top:0%;
 	}
 	#reception{
 		transform:rotate(25deg);
 		width:45%;
 		left:10%;
+		top: 15%
 	}
 	#wiki{	
 		transform:rotate(-15deg);
 		width:47%;
+		left:5%;
 		top:65%;
-		left:10%;
 	}
 	#GeneralAccount{
 		width:30%;
-		right:15%;
-		top:55%;
+		right:10%;
+		top:45%;
 	}
 }
 
