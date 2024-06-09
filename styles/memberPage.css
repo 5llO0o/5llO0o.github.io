@@ -60,3 +60,9 @@
     display: none;
 	animation: fadeInUp 1s ease forwards;
 }
+
+@media (max-width: 767px){
+	#memberPage{
+		margin-bottom:90%;
+	}
+}

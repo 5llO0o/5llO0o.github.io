@@ -72,7 +72,7 @@
 }
 
 @media (max-width: 767px){
-	#screen2 main{
+	#mainContent{
 		margin-bottom:90%;
 	}
 	.schedule-slider{
