@@ -32,6 +32,11 @@
 				<li><a href="#" data-target="battlePage">BATTLE SYSTEM</a></li>
 				<li><a href="#" data-target="memberPage">MEMBERS</a></li>
 			</ul>
+			<div class="ThemeSong-Player">
+				<button id="playButton">❚❚</button>
+				<label for="volumeControl">Volume: </label>
+				<input type="range" id="volumeControl" class="rangeInput" min="0" max="100" value="100">
+			</div>
 		</div>
 		<header>
 			<div class="button-container">
@@ -138,13 +143,15 @@
 		<footer>
 			<p>하단부 멘트</p>
 		</footer>
+		<div>
+			<iframe id="youtube-player" width="0" height="0" src="https://www.youtube.com/embed/D2gIt7WSY5Q?enablejsapi=1&loop=1&playlist=D2gIt7WSY5Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
 	</div>
 </body>
 	<script src="js/schedule.js"></script>
 	<script src="js/buttonPage.js"></script>
 	<script src="js/Menu.js"></script>
 	<script src="js/gallery.js"></script>
-	<script src="js/memberPage.js"></script>	
+	<script src="js/memberPage.js"></script>
 	<script src="js/worldPage.js"></script>
-	
 </html>
