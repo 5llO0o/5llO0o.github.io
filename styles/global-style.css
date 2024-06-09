@@ -14,7 +14,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     justify-content: center;
-    background-color: #97c5ed;
+    background-color: #eefaff;
     overflow-x:hidden;
 }
 .screen {
@@ -70,17 +70,25 @@ main{
 }
 
 #nextButton {
-    font-size: 24px;
+	background-image: url("../image/아이콘1.png");
+	background-repeat: no-repeat;
+	background-size:100%;
+	width: 250px;
+	height: 250px;
     padding: 10px 20px;
     cursor: pointer;
     background-color: transparent;
     border: none;
     transition: background-color 0.3s ease;
+	opacity: 0.8;
 }
 
 #nextButton:hover {
-    background-color: rgba(128, 128, 128, 0.3);
+    transform: scale(1.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+	opacity:1;
 }
+
 #menuButton {
     position: absolute;
     top: 10px;
@@ -110,7 +118,6 @@ main{
     font-size: 20px;
     cursor: pointer;
     color: white;
-    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +126,8 @@ main{
 }
 .button-container button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s, text-shadow 0.3s;
+    text-shadow: 0 0 10px rgba(0, 11, 128, 0.8);
 }
 #noticeButton,
 #worldButton,
@@ -127,10 +135,6 @@ main{
 #systemButton,
 #battleButton,
 #memberButton{
-	background-image: url("../image/Global-image/ButtonImage.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
     aspect-ratio: 1 / 1; /* 정사각형 비율 설정 */	
     border-radius: 50%;
     width: 85px;
@@ -252,7 +256,7 @@ footer{
 	}
     header {
         min-width: 320px;        
-        height: 8em;
+        height: 10em;
         margin-top: 30px;
     }
 	#screen2{
@@ -264,6 +268,10 @@ footer{
 	#section-all{
 		background-size: 100%;
 		background-repeat: no-repeat;
+	}
+	#nextButton{
+		width:150px;
+		height:150px;
 	}
 
     .gallery {
@@ -288,7 +296,7 @@ footer{
 		display:none;	
 	}
 	#mainButton{ 
-		width:30%
+		width:30%;
 	}
 	
 	#GeneralAccount{
@@ -309,7 +317,7 @@ footer{
 		background-color: transparent;
 		font-size: 20px;
 		cursor: pointer;
-		color: white;
+		color: #000b80;
 		transition: transform 0.3s, box-shadow 0.3s;
 		font-family: 'Kopub Batang', sans-serif;
 		bottom:15px;
