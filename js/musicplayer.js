@@ -18,3 +18,20 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const playButton = document.getElementById("playButton");
+    const volumeControl = document.getElementById("volumeControl");
+
+    playButton.addEventListener("mouseover", function() {
+        volumeControl.style.opacity = "1";
+        volumeControl.style.visibility = "visible";
+        volumeControl.style.left = "50px";
+    });
+
+    playButton.addEventListener("mouseout", function() {
+        volumeControl.style.opacity = "0";
+        volumeControl.style.visibility = "hidden";
+        volumeControl.style.left = "-100px";
+    });
+});
