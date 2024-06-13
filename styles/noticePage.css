@@ -1,2 +1,3 @@
-#noticePage{
+.notice_list li::marker {
+	content:'✶ ';
 }
