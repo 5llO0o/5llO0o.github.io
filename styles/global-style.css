@@ -33,19 +33,23 @@ body, html {
 	background-repeat: no-repeat;
     align-items: center;
 }
-#screen2 main{
-	background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 50px, rgba(244, 249, 252, 0.6));
-}
 
 .subpage{
 	position: relative;
-    width: 90%;
+    width: 100%;
     height: 100%;
 	margin:0 auto;
     flex-wrap: wrap;
 	animation: fadeIn 1s ease-out;
 }
-
+.paper{
+	width:100%;
+	background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(238, 250, 255, 0.4) 10%);
+}
+.text-content{
+	width: 90%;
+	margin: 0 auto;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -62,6 +66,7 @@ body, html {
 header {
     display: flex;
 	margin: 0 auto;
+    height: 270px;
 }
 
 main{
@@ -138,31 +143,21 @@ main{
 #battleButton,
 #memberButton{
     aspect-ratio: 360 / 115;
-	width:150px;
+	width:180px;
 	background-image:url("../image/Global-image/botton.png");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	align-items:end;
 	text-shadow: 0 0 15px rgba(0, 11, 128, 1), 0 0 15px rgba(0, 11, 128, 1);
 }
-#worldButton{
-	text-shadow: 0 0 15px rgba(0, 11, 128, 1), 0 0 15px rgba(0, 11, 128, 1), 0 0 20px rgba(0, 11, 128, 1), 0 0 25px rgba(0, 11, 128, 1);
-}
-#guideButton{
-	text-shadow: 0 0 15px rgba(0, 11, 128, 1), 0 0 15px rgba(0, 11, 128, 1), 0 0 20px rgba(0, 11, 128, 1), 0 0 25px rgba(0, 11, 128, 1), 0 0 20px rgba(0, 0, 0, 1), 0 0 25px rgba(0, 0, 0, 1);
-}
-#systemButton{
-	font-size:15px;
-}
+#guideButton,
+#systemButton,
 #battleButton{
-	font-size:13px;
-}
-#memberButton{
-	text-shadow: 2px 2px 3px rgba(0, 11, 128, 1) ,4px 4px 1px rgba(255, 255, 255, 1);
+	font-size:15px;
 }
 #mainButton{
 	top: -5%;
-    width: 25%;
+    width: 30%;
 	background-image: url("../image/Global-image/logo2.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -301,7 +296,7 @@ main{
     margin: 0;
     padding: 0;
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 4s ease-in-out;
 	color: #00ddff;
 	text-align:center;
 }
@@ -313,7 +308,29 @@ main{
     opacity: 1;
 	background-color:#000;
 }
-
+.mob-scrollup{
+	position: relative;
+	width:100%;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+#scrollToTop {
+	position: absolute;
+	user-select : none;
+	border: none;
+	background-color: transparent;
+	font-size: 20px;
+	cursor: pointer;
+	color: #000B80;
+	transition: transform 0.3s, box-shadow 0.3s;
+	font-family: 'Kopub Batang', sans-serif;
+	bottom:15px;
+}
+#scrollToTop:hover {
+	transform: scale(1.5);
+}
 footer{
 	color:#CCC;
 	text-align:center;
@@ -373,57 +390,8 @@ footer{
 	#GeneralAccount{
 		width:75px;
 	}
-	.mob-scrollup{
-		position: relative;
-		width:100%;
-		justify-content: center;
-		display: flex;
-		flex-wrap: wrap;
-		margin-bottom: 20px;
-	}
-	#scrollToTop {
-		position: absolute;
-		user-select : none;
-		border: none;
-		background-color: transparent;
-		font-size: 20px;
-		cursor: pointer;
-		color: #fff;
-		transition: transform 0.3s, box-shadow 0.3s;
-		font-family: 'Kopub Batang', sans-serif;
-		bottom:15px;
-	}
-	#scrollToTop:hover {
-		transform: scale(1.5);
-	}
-	#volumeControl{
-	opacity:1;
-	}
+	
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-	header {
-        max-width: 991px;
-        height: 230px;
-    }
-	#screen2 main{
-		max-width: 1200px;
-		width:90%;
-	}
-    .gallery {
-        max-width: 1200px;
-        height: 20px;
-    }
-
-    .button-container {
-        display: flex;
-    }
-	#scrollToTop{
-		display:none;
-	}
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
 	header {
         max-width: 1100px;
         height: 230px;
@@ -440,29 +408,12 @@ footer{
     .button-container {
         display: flex;
     }
-	#scrollToTop{
-		display:none;
-	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
 }
 
 @media (min-width: 1200px) {
-	header {
-        max-width: 1200px;
-        height: 250px;
-    }
-	#screen2 main{
-		max-width: 1200px;
-		width:90%;
-	}
-    .gallery {
-        max-width: 1200px;
-        height: 20px;
-    }
-    .button-container {
-        display: flex;
-    }
-	
-	#scrollToTop{
-		display:none;
-	}
 }
