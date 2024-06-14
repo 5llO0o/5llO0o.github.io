@@ -15,7 +15,7 @@ body, html {
     justify-content: center;
     overflow-x:hidden;
     background-color: #eefaff;
-	background-image: url("../image/Global-image/header.png?raw=true");
+	background-image: url("../image/Global-image/header.webp");
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -27,7 +27,7 @@ body, html {
 #screen1 {
 	display:flex;
     justify-content: center;
-	background-image: url("../image/Global-image/배경4.jpg?raw=true");
+	background-image: url("../image/Global-image/배경5.webp");
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
