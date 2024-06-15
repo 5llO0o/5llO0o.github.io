@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     function checkPassword() {
         const passwordInput = document.getElementById('password').value;
-        const correctPassword = '0000';
+        const correctPassword = 'Omne Sublime Videt';
         const errorMessage = document.getElementById('error-message');
         const protectedContent = document.getElementById('protected-content');
         const passwordContainer = document.getElementById('password-container');

@@ -307,6 +307,9 @@ main{
     height: 20px;
     opacity: 1;
 	background-color:#000;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 .mob-scrollup{
 	position: relative;
@@ -326,7 +329,7 @@ main{
 	color: #000B80;
 	transition: transform 0.3s, box-shadow 0.3s;
 	font-family: 'Kopub Batang', sans-serif;
-	bottom:15px;
+	bottom:5px;
 }
 #scrollToTop:hover {
 	transform: scale(1.5);
@@ -338,7 +341,7 @@ footer{
 	font-family: 'Kopub Batang', sans-serif;
 }
 
-@media (max-width: 767px){
+@media (max-width: 991px){
 	header {
         min-width: 320px;        
         height: 10em;
@@ -410,9 +413,6 @@ footer{
         display: flex;
     }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
 }
 

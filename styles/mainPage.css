@@ -96,7 +96,7 @@
     right: 0;
 }
 
-@media (max-width: 767px){
+@media (max-width: 991px){
 	#mainContent{
 		margin-bottom:120%;
 	}
@@ -143,10 +143,6 @@
 		right:10%;
 		top:78%;
 	}
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

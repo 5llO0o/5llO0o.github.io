@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const images = gallery.getElementsByTagName('li');
 	const totalImages = images.length;
 	let currentIndex = 0;
-	const speed = 6000; // 5 seconds interval
+	const speed = 8000; // 5 seconds interval
 	
 	function showNextImage() {
 		const sliderWidth = slider.clientWidth;
