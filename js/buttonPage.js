@@ -53,7 +53,21 @@ document.addEventListener("DOMContentLoaded", function() {
             player.setVolume(volume);
         });
     }
-
+	document.getElementById('simbol').addEventListener('click', function() {
+		document.getElementById('screen3').style.display = 'none';
+        document.getElementById('screen2').style.display = 'block';
+        hideAllPages();
+        mainContent.style.display = 'block';
+        if (player && typeof player.playVideo === 'function') {
+            player.playVideo();
+			document.getElementById('volumeControl').addEventListener('input', function() {
+            var volume = this.value;
+            player.setVolume(volume);
+			});
+            isPlaying = true;
+            document.getElementById('playButton').textContent = '▶';
+		}
+    });
     document.getElementById('nextButton').addEventListener('click', function() {
         document.getElementById('screen1').style.display = 'none';
         document.getElementById('screen2').style.display = 'block';
@@ -61,7 +75,10 @@ document.addEventListener("DOMContentLoaded", function() {
         mainContent.style.display = 'block';
         if (player && typeof player.playVideo === 'function') {
             player.playVideo();
-            player.setVolume(100); // 볼륨 설정
+			document.getElementById('volumeControl').addEventListener('input', function() {
+            var volume = this.value;
+            player.setVolume(volume);
+        });
             isPlaying = true;
             document.getElementById('playButton').textContent = '▶';
         }
@@ -101,6 +118,39 @@ document.addEventListener("DOMContentLoaded", function() {
         hideAllPages();
         memberPage.style.display = 'block';
     });
+	
+	function checkPassword() {
+        const passwordInput = document.getElementById('password').value;
+        const correctPassword = 'Omne Sublime Videt';
+        const errorMessage = document.getElementById('error-message');
+        const protectedContent = document.getElementById('protected-content');
+        const passwordContainer = document.getElementById('password-container');
+
+        if (passwordInput === correctPassword) {
+			isPlaying = false;
+			console.log(isPlaying);
+            passwordContainer.classList.remove('show');
+            setTimeout(() => {
+				protectedContent.style.display = 'block';
+                document.getElementById('screen2').style.display = 'none';
+                document.getElementById('screen3').style.display = 'flex';
+                protectedContent.classList.add('show');
+            }, 500);
+            errorMessage.style.display = 'none';
+        } else {
+            errorMessage.style.display = 'block';
+        }
+    }
+	
+	function handleKeyUp(event) {
+        if (event.key === 'Enter') {
+            checkPassword();
+        }
+    }
+    window.checkPassword = checkPassword;
+    window.handleKeyUp = handleKeyUp;
+	const passwordContainer = document.getElementById('password-container');
+    passwordContainer.classList.add('show');
 
     // YouTube iframe API 스크립트 추가
     var tag = document.createElement('script');

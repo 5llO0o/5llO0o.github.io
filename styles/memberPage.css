@@ -13,8 +13,16 @@
 	font-weight: normal;
     font-style: normal;
 }
-#memberPage{
+#screen3{
+	background-color:#000;
+    font-family: '국립박물관문화재단';
+	font-size:20px;
+    justify-content: center;
+	align-items:center;
+	text-align:center;
+	animation: fadeIn 1s ease-out;
 }
+
 #hint-text{
     font-family: '국립박물관문화재단';
 }
@@ -58,6 +66,7 @@
 }
 
 #password {
+    font-family: '국립박물관문화재단';
     padding: 10px;
     margin: 10px 0;
     border: transparent;
@@ -123,12 +132,8 @@
     font-size: 24px;
 }
 
-.page {
+.grade {
     display: none;
-}
-
-.page.active {
-    display: block;
 }
 
 

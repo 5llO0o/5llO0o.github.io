@@ -78,7 +78,7 @@ main{
 	text-align: justify;
 }
 
-#nextButton {
+#nextButton, #simbol {
 	background-image: url("../image/아이콘1.webp");
 	background-repeat: no-repeat;
 	background-size:100%;
@@ -88,11 +88,15 @@ main{
     cursor: pointer;
     background-color: transparent;
     border: none;
-    transition: background-color 0.3s ease;
 	opacity: 0.8;
 }
+#simbol{
+	width:50px;
+	height:50px;
+}
 
-#nextButton:hover {
+
+#nextButton:hover, simbol:hover{
     transform: scale(1.1);
     transition: transform 0.3s, box-shadow 0.3s;
 	opacity:1;
@@ -145,7 +149,7 @@ main{
 #battleButton,
 #memberButton{
     aspect-ratio: 360 / 115;
-	width:180px;
+	width:230px;
 	background-image:url("../image/Global-image/botton.webp");
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -251,7 +255,7 @@ main{
     user-select: none;
     border: none;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     color: #000B80;
 	opacity: 0.2;
@@ -263,7 +267,7 @@ main{
 
 #volumeControl {
     position: absolute;
-	top: 30%;
+	top:40%;
     left: -100px;
     transform: translateY(50%);
     width: 100px;
@@ -294,7 +298,9 @@ main{
     width: 90%;
 	margin: 70px auto 0;
 	height:30px;
-	background:#000;
+	background-color: #fff;
+	border-top: 2px solid #0b5394;
+	border-bottom: 2px solid #0b5394;
 }
 .gallery {
     list-style: none;
@@ -302,7 +308,7 @@ main{
     padding: 0;
     display: flex;
     list-style-type: none;
-	color: #00ddff;
+	color: #00c9e9;
 	text-align:center;
     animation: slide-left 30s linear infinite;
 }
