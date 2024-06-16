@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝐋𝐞𝐯𝐢𝐚𝐭𝐡𝐚𝐧</title>
+    <title>■■■■</title>
 	<link rel="stylesheet" href="styles/global-style.css">
 	<link rel="stylesheet" href="styles/memberPage.css">
 	<link rel="stylesheet" href="styles/worldPage.css">
@@ -65,14 +65,18 @@
 				</div>
 				<div class="main-button">
 				<a href="https://forms.gle/Pq8zJbHXgfgVvyPs6" target="_blank">
-					<img src="image/MainPage/reception.png" id="reception" alt="설정 접수폼">
+					<img src="image/MainPage/reception.png" id="reception" alt="신청서 접수폼">
+				</a>
+				<a href="https://docs.google.com/document/d/13jHcv6JWu4doW20sr6JUkE5xRKJwllyCJ1dmnndZsoU/edit?usp=sharing" target="_blank">
+					<img src="image/MainPage/guide.png" id="guide" alt="설정 접수 가이드">
 				</a>
 				<a href="https://docs.google.com/document/d/1NjlQ0COX55Yeg1U9Y-8U9PdmBSTpTLvuu2mliDqeLsc/edit?usp=sharing" target="_blank">
 					<img src="image/MainPage/QnA.png" id="QnA" alt="QnA">
 				</a>
 				<a href="#" target="_blank">
 					<img src="image/MainPage/wiki.png" id="wiki" alt="마법 위키">
-				</a>			
+				</a>
+				<a><img src="image/MainPage/quill.png" id="quill" alt="깃펜 소문 신문"></a>				
 				<a href="https://x.com/@ANATKH_B_L" target="_blank">
 				<img src="image/MainPage/owl-GeneralAccount.png" id="GeneralAccount" title="총괄계정 바로가기">
 				</a>
@@ -327,10 +331,12 @@
 			</div>
 			<div id="memberPage" class="subpage">
 				<div id="password-container">
-					<button class="secret"></button>
+					<button class="secret" id="featherButton"></button>
 					<br />
+					<div id="password-inputBox">
 					<input id="password" placeholder="이건 조금 있다 숨겨집니다" onkeyup="handleKeyUp(event)">
 					<button class="secret" id="protect-button" onclick="checkPassword()"></button>
+					</div>
 					<p id="error-message" style="color: red; display: none;">오류 메세지</p>
 					<p style="color:#000b80; font-style:italic; font-size:15px;">마법의 깃펜이 그대들의 이름을 써내려가기 시작합니다....</p>
 					<p style="color:#6fa8dc; font-style:italic; font-size:12px;">푸른 호수 속 이곳저곳에 흩어 숨겨진 파편이 모여 하나가 되는 때, 비로소 숙명이라는 이름의 시계가 돌아가기 시작한다.</p>
@@ -338,8 +344,18 @@
 					<b><br /><br /><br /><br /><br /></b>
 				</div>
 				<div id="protected-content">
-					<h1>멤버란</h1>
-					<p>이스터에그를 뚠 따 뚠 따</p>
+					<div class="navbar">
+						<button class="nav-btn disabled" id="btn1st" disabled>1학년</button>
+						<button class="nav-btn disabled" id="btn4th" disabled>4학년</button>
+						<button class="nav-btn disabled" id="btn7th" disabled>7학년</button>
+						<button class="nav-btn disabled" id="btnA" disabled>성인</button>
+					</div>
+					<div class="profile" id="profile">
+						<div id="1st" class="page">1학년</div>
+						<div id="4th" class="page" style="display: none;">4학년</div>
+						<div id="7th" class="page" style="display: none;">7학년</div>
+						<div id="adult" class="page" style="display: none;">성인</div>
+					</div>
 				</div>
 			</div>
 			</div>
