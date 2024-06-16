@@ -1,4 +1,18 @@
 /*Main Page*/
+@font-face {
+    font-family: '국립박물관문화재단';
+    src: url("../font/국립박물관문화재단클래식L.otf") format('opentype'),
+		 url("../font/국립박물관문화재단클래식L.ttf") format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DNFForgedBlade';
+    src: url("../font/DNFForgedBlade-Medium.otf") format('opentype'),
+		 url("../font/DNFForgedBlade-Medium.ttf") format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
 #mainContent{
 	margin-bottom:8%;
 }
@@ -7,7 +21,6 @@
     position: relative;
     overflow: hidden;
 	width:70%;
-	width:55%;
 	user-select : none;
 }
 .schedule-slider button{
@@ -58,6 +71,9 @@
     right: 2%;
 	z-index:99;
 }
+.main-content img{
+	width:100%;
+}
 #QnA, #reception, #wiki, #quill, #guide{
 	width:30%;
 	position: absolute;
@@ -70,7 +86,7 @@
     bottom: 2%;
     right: 5%;
     margin: 10px;
-	width: 10vw;
+	width: 10%;
 	z-index:99;
 	user-select : none;
 }
@@ -84,7 +100,6 @@
 }
 #quill:hover{
 }
-
 #reception{
 	transform:rotate(-26deg);
     top: 0;
@@ -111,6 +126,29 @@
 	width: 20%;
 	right:8%;
 }
+.main-content:hover .hover-text{
+	display:block;
+}
+.hover-text{
+	display:none;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    color: rgba(0, 11, 128, 0.8);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),0 0 10px rgba(255, 255, 255, 0.8),0 0 10px rgba(255, 255, 255, 0.8);
+	white-space : nowrap; 
+	font-family:'국립박물관문화재단';
+	font-size:32px;
+}
+.hover-text #entext{
+    font-family: 'DNFForgedBlade';
+}
+#protect-img{
+	width:40%;
+	filter: opacity(0.4) drop-shadow(0 0 0 #fff);
+}
+
 
 @media (max-width: 991px){
 	#mainContent{

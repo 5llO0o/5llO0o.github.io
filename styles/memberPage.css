@@ -6,18 +6,27 @@
 	font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: '국립박물관문화재단';
+    src: url("../font/국립박물관문화재단클래식L.otf") format('opentype'),
+		 url("../font/국립박물관문화재단클래식L.ttf") format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
 #memberPage{
 }
-
+#hint-text{
+    font-family: '국립박물관문화재단';
+}
 .secret{
-	background-image: url("../image/easter.png");
+	background-image: url("../image/easter.webp");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	user-select : none;
     padding: 10px 20px;
     border: none;
-    background-color: #FFFFFF;
+    background-color: transparent;
     color: #333;
     cursor: pointer;
     aspect-ratio: 1/1;
@@ -77,6 +86,9 @@
     display: none;
 	animation: fadeInUp 1s ease forwards;
 }
+#easter-text{
+	display:none;
+}
 
 .navbar {
     display: flex;
@@ -123,5 +135,8 @@
 @media (max-width: 991px){
 	#memberPage{
 		margin-bottom:90%;
+	}
+	#easter-text{
+		display:block;
 	}
 }

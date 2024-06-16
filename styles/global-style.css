@@ -43,8 +43,10 @@ body, html {
 	animation: fadeIn 1s ease-out;
 }
 .paper{
-	width:100%;
-	background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(238, 250, 255, 0.7) 10%);
+	width:90%;
+	margin:0 auto;
+    flex-wrap: wrap;
+	background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0), rgba(238, 250, 255, 0.7) 10%);
 }
 .text-content{
 	width: 90%;
@@ -73,7 +75,7 @@ main{
 	margin: 0 auto;
 	font-family: 'Kopub Batang';
 	font-weight: lighter;
-	word-break: keep-all;
+	text-align: justify;
 }
 
 #nextButton {
@@ -285,32 +287,40 @@ main{
 
 /*슬라이더*/
 .slider {
+	display:flex;
     position: relative;
     overflow: hidden;
-    justify-content: center;
-	margin-top:60px;
+	align-items:center;
+    width: 90%;
+	margin: 70px auto 0;
+	height:30px;
+	background:#000;
 }
-
 .gallery {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    transition: transform 4s ease-in-out;
+    list-style-type: none;
 	color: #00ddff;
 	text-align:center;
+    animation: slide-left 30s linear infinite;
 }
 
 .gallery li {
-    flex-shrink: 0;
+    flex: 0 0 100%;
     width: 100%;
     height: 20px;
     opacity: 1;
-	background-color:#000;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 }
+@keyframes slide-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-300%); }
+}
+
 .mob-scrollup{
 	position: relative;
 	width:100%;
