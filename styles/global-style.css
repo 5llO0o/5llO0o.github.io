@@ -15,8 +15,8 @@ body, html {
     justify-content: center;
     overflow-x:hidden;
     background-color: #eefaff;
-	background-image: url("../image/Global-image/header.webp");
-    background-size: 100%;
+	background-image: url("../image/Global-image/background.webp");
+    background-size: cover cover;
     background-repeat: no-repeat;
 }
 .screen {
@@ -32,6 +32,11 @@ body, html {
 	background-size: cover;
 	background-repeat: no-repeat;
     align-items: center;
+}
+#screen2{
+	background-image: url("../image/Global-image/header.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .subpage{
