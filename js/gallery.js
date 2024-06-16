@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const galleryList = document.getElementById('gallery');
   
   // Function to rotate items in the gallery
@@ -10,4 +10,4 @@
   
   // Rotate gallery every 3 seconds (adjust interval as needed)
   setInterval(rotateGallery, 3000);
-});*/
+});
