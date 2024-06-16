@@ -323,7 +323,7 @@ main{
 }
 @keyframes slide-left {
   0% { transform: translateX(100%); }
-  100% { transform: translateX(-300%); }
+  100% { transform: translateX(-600%); }
 }
 
 .mob-scrollup{
