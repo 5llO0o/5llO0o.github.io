@@ -16,7 +16,7 @@ body, html {
     overflow-x:hidden;
     background-color: #eefaff;
 	background-image: url("../image/Global-image/header.webp");
-    background-size: cover cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 .screen {
