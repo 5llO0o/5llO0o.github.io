@@ -13,11 +13,11 @@
 	font-weight: normal;
     font-style: normal;
 }
+
 #mainContent{
 	margin-bottom:8%;
 }
 .schedule-slider {
-	margin-top:2%;
     position: relative;
     overflow: hidden;
 	width:70%;
@@ -107,22 +107,22 @@
 }
 #QnA{	
 	transform:rotate(9deg);
-	top:50%;
+	top:47%;
 	left:12%;
 }
 #wiki{
 	transform:rotate(25deg);
 	width:30%;
-    top: 82%;
+    top: 80%;
     right: 32%;
 }
 #reception-guide{
-    top: 40%;
+    top: 38%;
     right: 25%;
 	width: 30%;
 }
 #quill{
-	top:45%;
+	top:43%;
 	width: 20%;
 	right:8%;
 }

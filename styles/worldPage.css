@@ -2,26 +2,29 @@
 }
 .faction-container{
 	display:flex;
-	margin: 10% auto 0;
+	margin: 10% 5% 0;
     justify-content: center;
 	text-align:center;
 	align-items:center;
 }
 .faction{
 	flex:1;
-	width:30%;
 	position: relative;
     display: block;
-	margin: 100px auto;
 	opacity: 0;
     transform: translateY(-50%);
     transition: opacity 2s ease-out, transform 2s ease-out;
+}
+#faction-img{
+	width:60%;
+	margin: 0 auto;
 }
 .faction.visible{
 	opacity: 1;
     transform: translateY(0);
     animation: fadeInUp 1s ease-out;
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

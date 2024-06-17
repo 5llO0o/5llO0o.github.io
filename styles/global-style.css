@@ -72,7 +72,7 @@ header {
 }
 
 main{
-	margin: 0 auto;
+	margin: 10% auto;
 	font-family: 'Kopub Batang';
 	font-weight: lighter;
 	text-align: justify;
@@ -95,6 +95,12 @@ main{
 	height:50px;
 }
 
+.Page-top-image{
+	display:grid;
+	user-select:none;
+	margin: 0 auto;
+	width:400px;
+}
 
 #nextButton:hover, simbol:hover{
     transform: scale(1.1);
@@ -128,7 +134,6 @@ main{
     position: absolute;
     border: none;
     background-color: transparent;
-    font-size: 18px;
     cursor: pointer;
     color: white;
     display: flex;
@@ -148,18 +153,12 @@ main{
 #systemButton,
 #battleButton,
 #memberButton{
-    aspect-ratio: 360 / 115;
-	width:230px;
-	background-image:url("../image/Global-image/botton.webp");
+    aspect-ratio: 991 / 693;
+	width:180px;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	align-items:end;
 	text-shadow: 0 0 15px rgba(0, 11, 128, 1), 0 0 15px rgba(0, 11, 128, 1);
-}
-#guideButton,
-#systemButton,
-#battleButton{
-	font-size:15px;
 }
 #mainButton{
 	top: -5%;
@@ -173,33 +172,43 @@ main{
 }
 
 #noticeButton {
+	background-image:url("../image/Global-image/공지버튼.webp");
     top: 10%;
     left: 7%;
 }
 
 #worldButton {
+	background-image:url("../image/Global-image/월드버튼.webp");
     top: 50%;
     left: 17%;
 }
 
 #guideButton {
+	background-image:url("../image/Global-image/캐가버튼.webp");
     top: 80%;
     left: 30%;
 }
 
 #systemButton {
+	background-image:url("../image/Global-image/제네럴시스템버튼.webp");
     top: 80%;
     right: 30%;
 }
 
 #battleButton {
+	background-image:url("../image/Global-image/배틀시스템버튼.webp");
     top: 50%;
     right: 17%;
 }
 
 #memberButton {
+	background-image:url("../image/Global-image/멤버버튼.webp");
     top: 10%;
     right: 7%;
+}
+
+.subpage{
+	margin-top:100px;
 }
 
 .menu {
@@ -287,7 +296,25 @@ main{
     visibility: visible;
     left: 50px;
 }
+.banner{
+	display:flex;
+    position: relative;
+	width:100%;
+	height:30px;
+}
 
+#banner1, #banner2{
+	height:48px;
+	position: absolute;
+	top:20px;
+	user-select:none;
+}
+#banner1{
+	left:4.4%;
+}
+#banner2{
+	right:4.4%;
+}
 
 /*슬라이더*/
 .slider {
@@ -296,7 +323,7 @@ main{
     overflow: hidden;
 	align-items:center;
     width: 90%;
-	margin: 70px auto 0;
+	margin: 30px auto 0;
 	height:30px;
 	background-color: #fff;
 	border-top: 2px solid #0b5394;
@@ -310,7 +337,7 @@ main{
     list-style-type: none;
 	color: #00c9e9;
 	text-align:center;
-    animation: slide-left 30s linear infinite;
+    animation: slide-left 60s linear infinite;
 }
 
 .gallery li {
@@ -321,6 +348,7 @@ main{
 	display:flex;
 	align-items:center;
 	justify-content:center;
+	white-space : nowrap; 
 }
 @keyframes slide-left {
   0% { transform: translateX(100%); }
@@ -351,7 +379,7 @@ main{
 	transform: scale(1.5);
 }
 footer{
-	color:#CCC;
+	color:#999;
 	text-align:center;
 	font-size:12px;
 	font-family: 'Kopub Batang', sans-serif;
@@ -360,13 +388,9 @@ footer{
 	header {
         min-width: 320px;        
         height: 10em;
-        margin-top: 30px;
+        margin-top: 20px;
+		margin-bottom: 100px;
     }
-	#screen2{
-		padding-top:50px;
-	}
-	#screen2 main{
-	}
 	
 	#section-all{
 		background-size: 100%;
@@ -403,7 +427,7 @@ footer{
 		display:none;	
 	}
 	#mainButton{ 
-		width:60%;
+		width:80%;
 	}
 	#mainButton:hover{
 		transform:scale(1);
@@ -425,15 +449,23 @@ footer{
         max-width: 1200px;
         height: 20px;
     }
+	#banner1, #banner2{
+	top:-10px;
+	}
 }
 @media (min-width: 768px) and (max-width: 991px){
 	header {
         min-width: 320px;        
-        height: 6em;
-        margin-top: 30px;
+        height: 12em;
+		margin-bottom: 80px;
     }
 	#screen2{
-		padding-top:50px;
+		padding-top:10px;
+	}
+	#screen2 main{
+		max-width: 1200px;
+		width:90%;
+		top:200px;
 	}
 	.slider {
 		margin-top:0;
@@ -460,8 +492,9 @@ footer{
 	#memberButton{
 		display: none;
 	}
-	#mainButton{ 
-		width:45%;
+	#mainButton{
+		top:0;
+		width:50%;
 	}
 	#mainButton:hover{
 		transform:scale(1);
@@ -470,11 +503,6 @@ footer{
 	#GeneralAccount{
 		width:75px;
 	}
-	
-	header {
-        max-width: 1100px;
-        height: 230px;
-    }
 	#screen2 main{
 		max-width: 1200px;
 		width:90%;
@@ -483,6 +511,15 @@ footer{
         max-width: 1200px;
         height: 20px;
     }
+	#banner1, #banner2{
+	top:-10px;
+	}
+	#banner1{
+		left:4%;
+	}
+	#banner2{
+		right:4%;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 }
