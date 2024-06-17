@@ -1,2 +1,3 @@
-#battlePage{
+.battle_list li::marker {
+	content:'✶ ';
 }
