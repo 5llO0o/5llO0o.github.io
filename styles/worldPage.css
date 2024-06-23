@@ -2,10 +2,9 @@
 }
 .faction-container{
 	display:flex;
-	margin: 10% 5% 0;
+	margin: 10% 2% 0;
     justify-content: center;
 	text-align:center;
-	align-items:center;
 }
 .faction{
 	flex:1;

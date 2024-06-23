@@ -20,36 +20,36 @@
 .schedule-slider {
     position: relative;
     overflow: hidden;
-	width:70%;
+	width:65%;
 	user-select : none;
+	margin-left:3%;
 }
-.schedule-slider button{
-	display:none;
+.schedule-container {
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    border: none;
+    position: relative;
 }
-.schedule {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+
+.schedule-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-	position: relative;
-    width: 100%;
-    height: 100%;
-	align-items: stretch;
 }
-.schedule li {
-    flex-shrink: 0;
-    height: 100%;
-	width:100%;
-    opacity: 1;
+
+.schedule-slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
-.schedule li img {
+
+.schedule-slide img {
     width: 100%;
+    height: auto;
 }
 
 .schedule-slider button{
 	position: absolute;
-	top: 50%;
+	top: 30%;
     background-color: transparent;
     color: black;
     padding: 10px 20px;
@@ -107,17 +107,17 @@
 }
 #QnA{	
 	transform:rotate(9deg);
-	top:47%;
+	top:54%;
 	left:12%;
 }
 #wiki{
 	transform:rotate(25deg);
 	width:30%;
-    top: 80%;
+    top: 85%;
     right: 32%;
 }
 #reception-guide{
-    top: 38%;
+    top: 45%;
     right: 25%;
 	width: 30%;
 }
