@@ -179,4 +179,8 @@
 	#easter-text{
 		display:none;
 	}
+	#drom-icon{
+		width:80%;
+		aspect-ratio: 438 / 485;
+	}
 }
