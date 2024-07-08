@@ -14,6 +14,7 @@
     font-style: normal;
 }
 #screen3{
+	display:none;
 	background-color:#000;
     font-family: '국립박물관문화재단';
 	font-size:20px;
@@ -66,6 +67,7 @@
     }
 }
 #password-container {
+	display:none;
     text-align: center;
     background-color: transparent;
     padding: 20px;
@@ -106,7 +108,7 @@
 }
 
 #protected-content {
-    display: none;
+    display: block;
 	animation: fadeInUp 1s ease forwards;
 }
 #easter-text{
@@ -150,12 +152,31 @@
     display: none;
 }
 
+.dorm{
+	display:flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items:center;
+	margin: 2%;
+}
+.dorm div {
+	opacity:0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.dorm img{
+	width:70%;
+}
+#drom-icon{
+	width:150px;
+    aspect-ratio: 438 / 485;
+}
 
 @media (max-width: 991px){
 	#memberPage{
 		margin-bottom:90%;
 	}
 	#easter-text{
-		display:block;
+		display:none;
 	}
 }
