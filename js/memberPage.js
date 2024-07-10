@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
                 }, delay);
-                delay += 100;
+                delay += 200;
             });
         });
 	}
@@ -57,5 +57,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		portrait();
 	});
 });
-
 
