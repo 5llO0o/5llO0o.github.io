@@ -146,4 +146,27 @@
 	#easter-text{
 		display:none;
 	}
+	.grade {
+    display: block;
+}
+
+.dorm{
+	display:flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items:center;
+	margin: 2%;
+}
+.dorm div {
+	opacity:0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.dorm img{
+	width:70%;
+}
+#drom-icon{
+	width:70%;
+    aspect-ratio: 438 / 485;
+}
 }
