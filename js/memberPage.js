@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
                 }, delay);
-                delay += 200;
+                delay += 500;
             });
         });
 	}
