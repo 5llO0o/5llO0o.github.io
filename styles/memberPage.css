@@ -123,20 +123,26 @@
     background-repeat: no-repeat;
 }
 #btn7th{
-	background-image: url("../image/member-image/7학년 미해금.webp");
+	background-image: url("../image/member-image/7학년 미클릭.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btn7th:hover{
+	background-image: url("../image/member-image/7학년 클릭.webp");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #btnA{
-	background-image: url("../image/member-image/성인 미해금.webp");
+	background-image: url("../image/member-image/성인 미클릭.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btnA:hover{
+	background-image: url("../image/member-image/성인 클릭.webp");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-.nav-btn.disabled {
-    background-color: transparent;
-    color: white;
-}
 
 .profile {
     padding: 10px;
@@ -148,26 +154,53 @@
 .grade {
     display: block;
 }
+.dorm-container{
+	display:flex;
+}
+.dorm1, .dorm4, .dorm7{
+	display:flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items:center;
+	margin: 2%;
+	height:300px;
+}
+.dorm1 div, .dorm4 div, .dorm7 div{
+	opacity:0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.dorm1 img{
+	width:80%;
+}
+.dorm4 img[id="portrait"]{
+	width:110%;
+}
+.dorm7 img[id="portrait"]{
+	width:115%;
+}
 
-.dorm1, .dorm4{
+.dormI, .dormT{
 	display:flex;
     flex-direction: row;
     justify-content: center;
 	align-items:center;
 	margin: 2%;
 }
-.dorm1 div, .dorm4 div{
+.dormI div, .dormT div{
+	width:35%;
 	opacity:0;
     transform: translateY(-100px);
     transition: opacity 0.5s, transform 0.5s;
 }
-.dorm1 img, .dorm4 img{
-	width:80%;
+.dormI img, .dormT img{
+	width:110%;
 }
+
+
 #drom-icon{
-	width:90%;
+	width:100px;
     aspect-ratio: 438 / 485;
-	display:flex;
 	justify-content: center;
 	align-items:center;
 }
@@ -187,19 +220,19 @@
 		display: block;
 	}
 	
-	.dorm1, .dorm4{
+	.dorm1, .dorm4, .dorm7{
 		display:flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items:center;
 		margin: 2%;
 	}
-	.dorm1 div, .dorm4 div{
+	.dorm1 div, .dorm4 div, .dorm7 div{
 		opacity:0;
 		transform: translateY(-100px);
 		transition: opacity 0.5s, transform 0.5s;
 	}
-	.dorm1 img, .dorm4 img{
+	.dorm1 img, .dorm4 img, .dorm7 img{
 		width:90%;
 	}
 	#drom-icon{

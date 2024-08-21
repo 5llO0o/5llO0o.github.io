@@ -15,8 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const battlePage = document.getElementById('battlePage');         // 배틀 시스템
     const memberPage = document.getElementById('memberPage');         // 멤버란
 
-	const dorm4 = document.querySelectorAll('.dorm4');
-    let delay = 0;
+	const dormI = document.querySelectorAll('.dormI');
+	const dormT = document.querySelectorAll('.dormT');
+    let delayI = 0;
+	let delayT = 0;
 
     var player;
     var isPlaying = false;
@@ -79,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 chapterOverlay.style.display = 'none';
                 document.getElementById('screen1').style.display = 'none';
                 document.getElementById('screen2').style.display = 'block';
-            }, 3000);
+            }, 5000);
 		
         hideAllPages();
         mainContent.style.display = 'block';
@@ -93,17 +95,31 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('playButton').textContent = '▶';
         }
     });
-	function portrait4() {
-		dorm4.forEach((dorm4, dorm4Index) => {
-            const elements = Array.from(dorm4.children);
-            const elementsToAnimate = (dorm4Index%2 === 1) ? elements.reverse() : elements;
+	function portraitI() {
+		dormI.forEach((dormI, dormIIndex) => {
+            const elements = Array.from(dormI.children);
+            const elementsToAnimate = (dormIIndex%2 === 0) ? elements.reverse() : elements;
 
             elementsToAnimate.forEach((element) => {
                 setTimeout(() => {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
-                }, delay);
-                delay += 500;
+                }, delayI);
+                delayI += 500;
+            });
+        });
+	}
+	function portraitT() {
+		dormT.forEach((dormT, dormTIndex) => {
+            const elements = Array.from(dormT.children);
+            const elementsToAnimate = (dormTIndex%2 === 0) ? elements.reverse() : elements;
+
+            elementsToAnimate.forEach((element) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delayT);
+                delayT += 500;
             });
         });
 	}
@@ -143,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.querySelectorAll(".grade").forEach(function(grade) {
             grade.style.display = "none";
 		});
-		document.getElementById("4th").style.display = "block";
-		portrait4();
+		document.getElementById("adult").style.display = "block";
+		Promise.all([portraitI(),portraitT()]);
     });
 	
 	function checkPassword() {

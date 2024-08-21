@@ -6,8 +6,39 @@ document.addEventListener("DOMContentLoaded", function() {
 	const links = document.querySelectorAll('.menu a');				//메뉴 글자
 	const subpages = document.querySelectorAll('.subpage');			//바뀌는 페이지 부분 블록
 	
-	const dorm4 = document.querySelectorAll('.dorm4');
-    let delay = 0;
+	const dormI = document.querySelectorAll('.dormI');
+	const dormT = document.querySelectorAll('.dormT');
+    let delayI = 0;
+	let delayT = 0;
+	
+	function portraitI() {
+		dormI.forEach((dormI, dormIIndex) => {
+            const elements = Array.from(dormI.children);
+            const elementsToAnimate = (dormIIndex%2 === 0) ? elements.reverse() : elements;
+
+            elementsToAnimate.forEach((element) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delayI);
+                delayI += 500;
+            });
+        });
+	}
+	function portraitT() {
+		dormT.forEach((dormT, dormTIndex) => {
+            const elements = Array.from(dormT.children);
+            const elementsToAnimate = (dormTIndex%2 === 0) ? elements.reverse() : elements;
+
+            elementsToAnimate.forEach((element) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delayT);
+                delayT += 500;
+            });
+        });
+	}
 
 	menuButton.addEventListener('click', function () {
 		const menuWidth = menu.offsetWidth;
@@ -67,22 +98,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 subpage.style.display = 'none';
                 if (subpage.id === targetId) {
                     subpage.style.display = 'block';
-					if(subpage.id === "memberPage")
-					{
-						dorm4.forEach((dorm4, dorm4Index) => {
-						const elements = Array.from(dorm4.children);
-						const elementsToAnimate = (dorm4Index%2 === 1) ? elements.reverse() : elements;
-			
-						elementsToAnimate.forEach((element) => {
-							element.style.opacity = '0';
-							setTimeout(() => {
-								element.style.opacity = '1';
-								element.style.transform = 'translateY(0)';
-							}, delay);
-							delay += 500;
-            });
-        });
-					}
+				if(subpage.id === "memberPage")
+				{
+					document.getElementById("adult").style.display = "block";
+					Promise.all([portraitI(),portraitT()]);
+				}
 					
                 }
             });

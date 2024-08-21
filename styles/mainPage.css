@@ -94,11 +94,9 @@
     transform: scale(1.1);
 	transition: transform 0.3, box-shadow 0.3s;
 }
-#QnA:hover, #reception:hover, #wiki:hover, #reception-guide:hover{
+#QnA:hover, #reception:hover, #wiki:hover, #reception-guide:hover,#quill:hover{
     transform: scale(1.1);
 	transition: transform 0.6s, box-shadow 0.6s;
-}
-#quill:hover{
 }
 #reception{
 	transform:rotate(-26deg);
@@ -140,6 +138,9 @@
 	white-space : nowrap; 
 	font-family:'국립박물관문화재단';
 	font-size:32px;
+}
+.hover-text img{
+	
 }
 .hover-text #entext{
     font-family: 'DNFForgedBlade';

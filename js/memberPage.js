@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	const dorm1 = document.querySelectorAll('.dorm1');
 	const dorm4 = document.querySelectorAll('.dorm4');
+	const dorm7 = document.querySelectorAll('.dorm7');
     let delay = 0;
 	
 	function hideAllPages() {
@@ -47,6 +48,20 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 	}
+	function portrait7() {
+		dorm7.forEach((dorm7, dorm7Index) => {
+            const elements = Array.from(dorm7.children);
+            const elementsToAnimate = (dorm7Index%2 === 1) ? elements.reverse() : elements;
+
+            elementsToAnimate.forEach((element) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delay);
+                delay += 500;
+            });
+        });
+	}
 	Button1st.addEventListener('click', function(){
 		hideAllPages();
 		page1st.style.display = 'block';
@@ -62,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	Button7th.addEventListener('click', function(){
 		hideAllPages();
 		page7th.style.display = 'block';
+		portrait7();
 		delay = 0;
 	});
 	ButtonA.addEventListener('click', function(){
