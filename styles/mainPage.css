@@ -127,6 +127,7 @@
 .main-content:hover .hover-text{
 	display:block;
 }
+
 .hover-text{
 	display:none;
 	position: absolute;
@@ -140,14 +141,12 @@
 	font-size:32px;
 }
 .hover-text img{
-	
+	width:60%;
+    transform: translate(32%, 10%);
+	opacity:0.7;
 }
 .hover-text #entext{
     font-family: 'DNFForgedBlade';
-}
-#protect-img{
-	width:40%;
-	filter: opacity(0.4) drop-shadow(0 0 0 #fff);
 }
 
 
